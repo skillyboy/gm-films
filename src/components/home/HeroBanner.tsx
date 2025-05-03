@@ -22,7 +22,7 @@ const HeroBanner = () => {
           alt=""
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black opacity-80"></div>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
       </div>
 
       {/* Content */}
@@ -34,7 +34,7 @@ const HeroBanner = () => {
                 isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}
             >
-              Captivating <span className="text-[#3A6E71]">Visual Stories</span> That Resonate
+              Creating <span className="text-[#3A6E71]">Visual Stories</span> That Resonate
             </h1>
             <p 
               className={`text-xl md:text-2xl text-gray-300 mb-10 transition-all duration-1000 delay-300 ${

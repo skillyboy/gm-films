@@ -122,7 +122,7 @@ const PortfolioPreview = () => {
             Our <span className="text-[#3A6E71]">Portfolio</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore our diverse range of visual storytelling across different genres and formats.
+            Explore our range of visual storytelling across different genres and formats.
           </p>
         </div>
         

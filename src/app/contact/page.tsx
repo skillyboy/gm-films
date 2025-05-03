@@ -18,7 +18,7 @@ export default function ContactPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-montserrat">
               Get In <span className="text-[#3A6E71]">Touch</span>
             </h1>
-            <p className="text-xl text-gray-300">
+            <p className="lg:text-xl text-gray-300">
               Have a project in mind or questions about our services? We&apos;d love to hear from you.
             </p>
           </div>

@@ -20,7 +20,7 @@ export default function ClientsPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-montserrat">
               Our <span className="text-[#3A6E71]">Clients</span>
             </h1>
-            <p className="text-xl text-gray-300">
+            <p className="lg:text-xl text-gray-300">
               We&apos;ve had the privilege of working with renowned brands and talented individuals 
               across various industries.
             </p>

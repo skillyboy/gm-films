@@ -19,7 +19,7 @@ export default function PortfolioPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-montserrat">
               Our <span className="text-[#3A6E71]">Portfolio</span>
             </h1>
-            <p className="text-xl text-gray-300">
+            <p className="lg:text-xl text-gray-300">
               Explore our diverse collection of projects spanning commercials, films, documentaries, 
               music videos, and event coverage.
             </p>

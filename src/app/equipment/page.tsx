@@ -18,7 +18,7 @@ export default function EquipmentPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-montserrat">
               Equipment <span className="text-[#3A6E71]">Rental</span>
             </h1>
-            <p className="text-xl text-gray-300">
+            <p className="lg:text-xl text-gray-300">
               Access professional cinematography equipment for your projects. We offer a wide range of 
               cameras, lenses, lighting setups, and accessories.
             </p>

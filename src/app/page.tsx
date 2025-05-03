@@ -3,9 +3,8 @@
 import HeroBanner from '@/components/home/HeroBanner';
 import PortfolioPreview from '@/components/home/PortfolioPreview';
 import ClientsSection from '@/components/home/ClientsSection';
-import EquipmentSection from '@/components/home/EquipmentSection';
+// import EquipmentSection from '@/components/home/EquipmentSection';
 import Button from '@/components/common/Button';
-// import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -35,18 +34,8 @@ export default function Home() {
             </div>
             <div className="w-full md:w-1/2">
               <div className="rounded-lg overflow-hidden flex justify-center">
-                {/* <div className="w-full h-full bg-[url('/images/clapperboard.png')] bg-cover bg-center"></div> */}
                 <img src={'/images/clapperboard.png'} className='w-[200px] h-[250px] lg:w-[300px] lg:h-[350px]' alt=''/>
               </div>
-              {/* <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden translate-y-8">
-                <div className="w-full h-full bg-[url('/images/behind-scenes-2.jpg')] bg-cover bg-center"></div>
-              </div> */}
-              {/* <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden -translate-y-8 ">
-                <div className="w-full h-full bg-[url('/images/cut-scene.jpg')] bg-cover bg-center"></div>
-              </div> */}
-              {/* <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
-                <div className="w-full h-full bg-[url('/images/bts.jpg')] bg-cover bg-center"></div>
-              </div> */}
             </div>
           </div>
         </div>
@@ -54,7 +43,7 @@ export default function Home() {
       
       <PortfolioPreview />
       <ClientsSection />
-      <EquipmentSection />
+      {/* <EquipmentSection /> */}
       
       {/* CTA Section */}
       <section className="py-20 bg-gray-900">

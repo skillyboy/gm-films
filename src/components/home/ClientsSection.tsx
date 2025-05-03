@@ -2,10 +2,8 @@ import Image from 'next/image';
 import Button from '@/components/common/Button';
 
 const clients = [
-  // { id: 1, name: 'OctaFx', logo: '/images/clients/client-1.svg' },
-  { id: 2, name: 'Glenfiddich', logo: '/images/Glenfiddich.png' },
+  { id: 2, name: 'evenintheday', logo: '/images/evenintheday.png' },
   { id: 3, name: 'Balvenie', logo: '/images/balvenie.png' },
-  // { id: 4, name: 'TravelBeta', logo: '/images/travelbeta.png' },
   { id: 5, name: 'CocaCola', logo: '/images/CocaCola.png' },
   { id: 6, name: 'Fanta', logo: '/images/fanta.png' },
 ];
@@ -29,7 +27,7 @@ const ClientsSection = () => {
               key={client.id} 
               className="flex items-center justify-center"
             >
-              <div className="relative h-12 w-full grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+              <div className="relative h-12 grayscale-100 w-full hover:grayscale-0 hover:opacity-100 transition-all duration-300">
                 <Image
                   src={client.logo}
                   alt={client.name}

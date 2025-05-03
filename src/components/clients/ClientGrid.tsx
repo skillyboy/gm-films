@@ -3,17 +3,17 @@ import Image from 'next/image';
 // Sample client data
 const clients = [
   // { id: 1, name: 'CocaCola', logo: '/images/clients/client-1.svg', industry: 'Entertainment' },
-  { id: 2, name: 'Fanta', logo: '/images/clients/client-2.svg', industry: 'Beverages' },
-  { id: 3, name: 'OctaFx', logo: '/images/clients/client-3.svg', industry: 'Technology' },
-  { id: 4, name: 'International Breweries', logo: '/images/clients/client-4.svg', industry: 'Beverages' },
-  { id: 5, name: 'Eveninday', logo: '/images/clients/client-5.svg', industry: 'Entertainment' },
-  { id: 6, name: 'MainlandBlock', logo: '/images/clients/client-6.svg', industry: 'Entertainment' },
-  { id: 7, name: 'Glenfiddich', logo: '/images/clients/client-7.svg', industry: 'Beverages' },
-  { id: 8, name: 'Balvenie', logo: '/images/clients/client-8.svg', industry: 'Beverages' },
-  { id: 9, name: 'Louie 13', logo: '/images/clients/client-9.svg', industry: 'Beverages' },
-  { id: 10, name: 'TravelBeta', logo: '/images/clients/client-10.svg', industry: 'Travel' },
-  { id: 11, name: 'Scheweppes', logo: '/images/clients/client-11.svg', industry: 'Beverages' },
-  { id: 12, name: 'Coca-Cola', logo: '/images/clients/client-12.svg', industry: 'Beverages' },
+  { id: 2, name: 'Fanta', logo: '/images/fanta.png', industry: 'Beverages' },
+  { id: 3, name: 'OctaFx', logo: '/images/octa.svg', industry: 'Technology' },
+  { id: 4, name: 'International Breweries', logo: '/images/intl-breweries.svg', industry: 'Beverages' },
+  { id: 5, name: 'Evenintheday', logo: '/images/evenintheday.png', industry: 'Entertainment' },
+  { id: 6, name: 'MainlandBlock', logo: '/images/mbp-logo-white.svg', industry: 'Entertainment' },
+  { id: 7, name: 'Glenfiddich', logo: '/images/Glenfiddich.png', industry: 'Beverages' },
+  { id: 8, name: 'Balvenie', logo: '/images/balvenie.png', industry: 'Beverages' },
+  { id: 9, name: 'Louie 13', logo: '/images/louie.svg', industry: 'Beverages' },
+  { id: 10, name: 'TravelBeta', logo: '/images/travelbeta.png', industry: 'Travel' },
+  { id: 11, name: 'Scheweppes', logo: '/images/schweppes.png', industry: 'Beverages' },
+  { id: 12, name: 'Coca-Cola', logo: '/images/cocacola.png', industry: 'Beverages' },
 ];
 
 // Group clients by industry

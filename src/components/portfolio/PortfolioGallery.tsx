@@ -1,16 +1,12 @@
 'use client';
-
-// import { useState } from 'react';
 import ProjectCard from './ProjectCard';
-// import { useRouter } from 'next/navigation';
 
-// Mock portfolio data with YouTube video URLs
+
 const portfolioItems = [
   {
     id: 1,
     title: 'Octa How to..',
     category: 'commercials',
-    image: '/images/portfolio/commercial-1.jpg',
     video: ' https://youtu.be/pcXIfx9V108',
     client: 'OctaFX',
   },
@@ -18,7 +14,6 @@ const portfolioItems = [
     id: 2,
     title: 'The Balvenie x Cigars',
     category: 'commercials',
-    image: '/images/portfolio/film-1.jpg',
     video: 'https://youtu.be/zRVyu58eT9o',
     client: 'Balvenie',
   },
@@ -26,7 +21,6 @@ const portfolioItems = [
     id: 3,
     title: 'Entity Fashion Film',
     category: 'commercials',
-    image: '/images/portfolio/music-1.jpg',
     video: 'https://youtu.be/_hekaNQ6-zU',
     client: 'Entity',
   },
@@ -34,7 +28,6 @@ const portfolioItems = [
     id: 4,
     title: 'Grand Cru Night',
     category: 'events',
-    image: '/images/portfolio/event-1.jpg',
     video: 'https://youtu.be/keoiQuOqML8',
     client: 'Glenfiddich',
   },
@@ -42,7 +35,6 @@ const portfolioItems = [
     id: 5,
     title: 'Balvenie Networking Event',
     category: 'events',
-    image: '/images/portfolio/commercial-2.jpg',
     video: 'https://youtu.be/k4l22qSuyZ8',
     client: 'Balvenie',
   },
@@ -50,7 +42,6 @@ const portfolioItems = [
     id: 6,
     title: 'If the world revolves around me',
     category: 'films',
-    image: '/images/portfolio/film-2.jpg',
     video: 'https://youtu.be/TebtBJPX7mo',
     client: 'OctaFX',
   },
@@ -58,7 +49,6 @@ const portfolioItems = [
     id: 7,
     title: 'Ready to Choose Financial Freedom?',
     category: 'commercials',
-    image: '/images/portfolio/music-2.jpg',
     video: 'https://youtu.be/xmOGaCZH7a8',
     client: 'OctaFx',
   },
@@ -66,7 +56,6 @@ const portfolioItems = [
     id: 8,
     title: 'Sounds from Vict0ny',
     category: 'music',
-    image: '/images/portfolio/event-2.jpg',
     video: 'https://youtu.be/tawp1V7M3i4',
     client: 'Vict0ny',
   },
@@ -74,7 +63,6 @@ const portfolioItems = [
     id: 9,
     title: 'Chess in Slums Makoko',
     category: 'films',
-    image: '/images/portfolio/commercial-3.jpg',
     video: 'https://youtu.be/scHxpzxmQQw',
     client: 'Chess in Slums',
   },
@@ -82,7 +70,6 @@ const portfolioItems = [
     id: 10,
     title: 'Travel Beta Ad',
     category: 'commercials',
-    image: '/images/portfolio/commercial-3.jpg',
     video: 'https://youtu.be/tSTGizFwJ6U',
     client: 'TravelBeta',
   },
@@ -96,11 +83,31 @@ const portfolioItems = [
   },
   {
     id: 12,
+    title: 'Balvenie Luxury Wine tasting',
+    category: 'events',
+    video: 'https://youtu.be/RayzG7M4B_w',
+    client: 'Balvenie',
+  },
+  {
+    id: 13,
     title: 'Octa celebrates 11 years',
     category: 'events',
-    image: '/images/portfolio/commercial-3.jpg',
     video: 'https://youtu.be/EI0snblr7q8',
     client: 'OctaFX',
+  },
+  {
+    id: 14,
+    title: 'OctaFX Q&A Session',
+    category: 'events',
+    video: 'https://youtu.be/caHYdPG0sCI',
+    client: 'OctaFX',
+  },
+  {
+    id: 15,
+    title: 'Embrace Equity (IWD)',
+    category: 'films',
+    video: 'https://youtu.be/9VYTNYg7_30',
+    client: 'KVLT',
   },
 ];
 

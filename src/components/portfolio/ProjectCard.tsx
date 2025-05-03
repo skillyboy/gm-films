@@ -6,7 +6,6 @@ interface Project {
   id: number;
   title: string;
   category: string;
-  image: string;
   video: string;
   client: string;
 }
