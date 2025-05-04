@@ -27,24 +27,24 @@ const CompanyStory = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 font-montserrat">
               Our <span className="text-[#3A6E71]">Story</span>
             </h2>
-            <p className="text-gray-300 mb-6 text-lg">
+            {/* <p className="text-gray-300 mb-6 text-lg">
               Founded in 2015, GMFILMS began as a small team of passionate filmmakers dedicated 
               to creating powerful visual narratives.
-            </p>
+            </p> */}
             <p className="text-gray-300 mb-6">
-              What started as a boutique cinematography studio quickly grew into a comprehensive 
-              production company, as our commitment to quality and creative excellence attracted 
-              clients from various industries.
-            </p>
-            <p className="text-gray-300 mb-6">
-              Over the years, we&apos;ve expanded our services to include equipment rental, providing 
-              fellow filmmakers with access to professional gear. We&apos;ve had the privilege of working 
-              with renowned brands, studios, and artists on projects that have reached global audiences.
+              At just 18, when the idea of starting a production company seemed out of reach, GMFilms was born from a bold belief: 
+              defy the odds. Inspired by a relentless drive to deliver excellence, Gorilla Mentality became more than just a name — 
+              it became our mindset. It’s about pushing limits, setting new standards, and consistently delivering top-tier 
+              visual content to our clients and audiences.
             </p>
             <p className="text-gray-300">
+              Today, GMFilms stands as a creative force, fueled by passion, resilience, and a commitment to high-quality production 
+              that speaks for itself.
+            </p>
+            {/* <p className="text-gray-300">
               Today, GMFILMS continues to push creative boundaries, combining technical expertise 
               with artistic vision to deliver exceptional visual content for our clients.
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
