@@ -1,79 +1,3 @@
-// import Link from 'next/link';
-// import Button from '@/components/common/Button';
-
-// const categories = [
-//   { 
-//     id: 'commercials', 
-//     name: 'Commercials', 
-//     image: '/images/portfolio/commercial-preview.jpg',
-//     count: 12
-//   },
-//   { 
-//     id: 'films', 
-//     name: 'Films & Documentaries', 
-//     image: '/images/portfolio/film-preview.jpg',
-//     count: 8
-//   },
-//   { 
-//     id: 'music', 
-//     name: 'Music Videos', 
-//     image: '/images/portfolio/music-preview.jpg',
-//     count: 15
-//   },
-//   { 
-//     id: 'events', 
-//     name: 'Event Coverage', 
-//     image: '/images/portfolio/event-preview.jpg',
-//     count: 10
-//   },
-// ];
-
-// const PortfolioPreview = () => {
-//   return (
-//     <section className="py-20 bg-black">
-//       <div className="container mx-auto px-4 md:px-6">
-//         <div className="text-center mb-16">
-//           <h2 className="text-3xl md:text-4xl font-bold mb-6 font-montserrat">
-//             Our <span className="text-[#3A6E71]">Portfolio</span>
-//           </h2>
-//           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-//             Explore our diverse range of visual storytelling across different genres and formats.
-//           </p>
-//         </div>
-        
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-//           {categories.map((category) => (
-//             <Link
-//               key={category.id}
-//               href={`/portfolio/${category.id}`}
-//               className="group relative overflow-hidden red"
-//             >
-//               <div className="aspect-video bg-gray-800 overflow-hidden">
-//                 <div 
-//                   className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-//                   style={{ backgroundImage: `url(${category.image})` }}
-//                 ></div>
-//               </div>
-//               <div className="absolute inset-0 bg-black bg-opacity-60 group-hover:bg-opacity-40 transition-all duration-300 flex flex-col justify-end p-6">
-//                 <h3 className="text-xl font-bold mb-2">{category.name}</h3>
-//                 <p className="text-sm text-gray-300">{category.count} Projects</p>
-//               </div>
-//             </Link>
-//           ))}
-//         </div>
-        
-//         <div className="text-center">
-//           <Button href="/portfolio">
-//             View All Projects
-//           </Button>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default PortfolioPreview;
-
 import VideoPlayer from '@/components/common/VideoPlayer';
 import Button from '@/components/common/Button';
 
@@ -90,10 +14,10 @@ const featuredProjects = [
   { 
     id: 6, 
     title: 'If the world revolves around me', 
-    category: 'films', 
+    category: 'commercials', 
     video: 'https://youtu.be/TebtBJPX7mo',
     client: 'OctaFX',
-    categoryName: 'Films & Documentaries'
+    categoryName: 'Commercials'
   },
   { 
     id: 8, 

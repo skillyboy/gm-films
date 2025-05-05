@@ -38,9 +38,9 @@ const ClientGrid = () => {
               {clientsByIndustry[industry].map((client) => (
                 <div 
                   key={client.id} 
-                  className="bg-gray-800 bg-opacity-50 p-6 flex items-center justify-center aspect-video"
+                  className="bg-gray-00 bg-opacity-50 flex items-center justify-center aspect-video"
                 >
-                  <div className="relative h-12 w-full opacity-80 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                  <div className="relative h-12 w-full transition-all duration-300">
                     <Image
                       src={client.logo}
                       alt={client.name}

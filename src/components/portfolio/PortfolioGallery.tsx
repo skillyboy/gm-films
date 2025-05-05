@@ -13,7 +13,7 @@ const portfolioItems = [
   {
     id: 2,
     title: 'The Balvenie x Cigars',
-    category: 'commercials',
+    category: 'events',
     video: 'https://youtu.be/zRVyu58eT9o',
     client: 'Balvenie',
   },
@@ -41,7 +41,7 @@ const portfolioItems = [
   {
     id: 6,
     title: 'If the world revolves around me',
-    category: 'films',
+    category: 'commercials',
     video: 'https://youtu.be/TebtBJPX7mo',
     client: 'OctaFX',
   },
@@ -98,7 +98,7 @@ const portfolioItems = [
   {
     id: 14,
     title: 'OctaFX Q&A Session',
-    category: 'events',
+    category: 'commercials',
     video: 'https://youtu.be/caHYdPG0sCI',
     client: 'OctaFX',
   },

@@ -27,7 +27,7 @@ const ClientsSection = () => {
               key={client.id} 
               className="flex items-center justify-center"
             >
-              <div className="relative h-12 grayscale-100 w-full hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+              <div className="relative h-12 w-full hover:grayscale-0 hover:opacity-100 transition-all duration-300">
                 <Image
                   src={client.logo}
                   alt={client.name}
