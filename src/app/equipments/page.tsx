@@ -166,7 +166,7 @@ export default function EquipmentPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="bg-gray-900 p-8 md:p-12 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">Ready to Rent Equipments?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Contact us to check availability, discuss your specific requirements, or schedule a rental.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
