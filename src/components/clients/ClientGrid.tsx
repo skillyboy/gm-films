@@ -8,7 +8,7 @@ const clients = [
   { id: 4, name: 'International Breweries', logo: '/images/intl-breweries.svg', industry: 'Beverages' },
   { id: 5, name: 'Evenintheday', logo: '/images/evenintheday.png', industry: 'Entertainment' },
   { id: 6, name: 'MainlandBlock', logo: '/images/mbp-logo-white.svg', industry: 'Entertainment' },
-  { id: 7, name: 'Glenfiddich', logo: '/images/Glen.svg', industry: 'Beverages' },
+  { id: 7, name: 'Glenfiddich', logo: '/images/Glen.png', industry: 'Beverages' },
   { id: 8, name: 'Balvenie', logo: '/images/balvenie.png', industry: 'Beverages' },
   { id: 9, name: 'Louie 13', logo: '/images/louie.svg', industry: 'Beverages' },
   { id: 10, name: 'TravelBeta', logo: '/images/travelbeta.png', industry: 'Travel' },
