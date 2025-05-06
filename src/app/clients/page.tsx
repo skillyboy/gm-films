@@ -1,6 +1,6 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 import ClientGrid from '@/components/clients/ClientGrid';
-import ClientTestimonial from '@/components/clients/ClientTestimonial';
+// import ClientTestimonial from '@/components/clients/ClientTestimonial';
 
 export default function ClientsPage() {
   return (
@@ -32,7 +32,7 @@ export default function ClientsPage() {
       <ClientGrid />
       
       {/* Featured Case Study */}
-      <section className="py-20 bg-black">
+      {/* <section className="py-20 bg-black">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-10 md:mb-0">
@@ -69,19 +69,19 @@ export default function ClientsPage() {
                 Our team handled the entire production process, from concept development to final delivery, 
                 resulting in a campaign that exceeded expectations and resonated with audiences worldwide.
               </p>
-              {/* <button className="inline-flex items-center text-white hover:text-[#3A6E71] transition-colors">
+              <button className="inline-flex items-center text-white hover:text-[#3A6E71] transition-colors">
                 <span className="mr-2">View Full Case Study</span>
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
-              </button> */}
+              </button>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       
       {/* Testimonials */}
-      <section className="py-20 bg-gray-900">
+      {/* <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 font-montserrat">
@@ -118,7 +118,7 @@ export default function ClientsPage() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

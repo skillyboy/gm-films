@@ -3,7 +3,6 @@
 import HeroBanner from '@/components/home/HeroBanner';
 import PortfolioPreview from '@/components/home/PortfolioPreview';
 import ClientsSection from '@/components/home/ClientsSection';
-// import EquipmentSection from '@/components/home/EquipmentSection';
 import Button from '@/components/common/Button';
 
 export default function Home() {
@@ -21,7 +20,7 @@ export default function Home() {
                 <span className="text-[#3A6E71]">Visual Storytelling</span>
               </h2>
               <p className="text-gray-300 mb-6 text-lg">
-                GMFILMS is a premier cinematography company dedicated to creating visually stunning narratives. 
+                GMFILMS is a premier film company dedicated to creating visually stunning narratives. 
                 Our expertise spans commercials, films, documentaries, music videos, and event coverage.
               </p>
               <p className="text-gray-300 mb-8">
@@ -43,7 +42,6 @@ export default function Home() {
       
       <PortfolioPreview />
       <ClientsSection />
-      {/* <EquipmentSection /> */}
       
       {/* CTA Section */}
       <section className="py-20 bg-gray-900">

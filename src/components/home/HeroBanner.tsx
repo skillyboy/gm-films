@@ -34,7 +34,7 @@ const HeroBanner = () => {
                 isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}
             >
-              Creating <span className="text-[#3A6E71]">Visual Stories</span> That Resonate
+              Telling <span className="text-[#3A6E71]">Impactful Stories</span> Through Visuals
             </h1>
             <p 
               className={`text-xl md:text-2xl text-gray-300 mb-10 transition-all duration-1000 delay-300 ${
