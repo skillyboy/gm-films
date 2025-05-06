@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-// import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 interface CategoryFilterProps {
@@ -12,15 +11,12 @@ const categories = [
   { id: 'all', name: 'All Projects' },
   { id: 'commercials', name: 'Commercials' },
   { id: 'films', name: 'Films & Documentaries' },
-  // { id: 'documentaries', name: 'Films & Documentaries' },
   { id: 'music', name: 'Music Videos' },
   { id: 'events', name: 'Event Coverage' },
 ];
 
 const CategoryFilter = ({ activeCategory }: CategoryFilterProps) => {
   const [active, setActive] = useState(activeCategory || 'all');
-  // const router = useRouter();
-  // const pathname = usePathname();
 
   useEffect(() => {
     setActive(activeCategory || 'all');

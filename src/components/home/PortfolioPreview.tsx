@@ -45,7 +45,7 @@ const PortfolioPreview = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-6 font-montserrat">
             Our <span className="text-[#3A6E71]">Portfolio</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="md:text-xl text-gray-300 max-w-3xl mx-auto">
             Explore our range of visual storytelling across different genres and formats.
           </p>
         </div>

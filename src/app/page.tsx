@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-// app/page.tsx
 import HeroBanner from '@/components/home/HeroBanner';
 import PortfolioPreview from '@/components/home/PortfolioPreview';
 import ClientsSection from '@/components/home/ClientsSection';
@@ -8,8 +7,7 @@ import Button from '@/components/common/Button';
 export default function Home() {
   return (
     <>
-      <HeroBanner />
-      
+      <HeroBanner />   
       {/* About Section */}
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4 md:px-6">
@@ -49,7 +47,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Bring Your <span className="text-[#3A6E71]">Vision to Life</span>?
           </h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+          <p className="md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
             Let&apos;s collaborate to create stunning visuals that tell your story and captivate your audience.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
