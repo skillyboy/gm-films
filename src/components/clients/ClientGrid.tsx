@@ -1,5 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
-// import Image from 'next/image';
+import Image from 'next/image';
 
 // Sample client data
 const clients = [
@@ -9,12 +8,12 @@ const clients = [
   { id: 4, name: 'International Breweries', logo: '/images/intl-breweries.svg', industry: 'Beverages' },
   { id: 5, name: 'Evenintheday', logo: '/images/evenintheday.png', industry: 'Entertainment' },
   { id: 6, name: 'MainlandBlock', logo: '/images/mbp-logo-white.svg', industry: 'Entertainment' },
-  { id: 7, name: 'Glenfiddich', logo: '/images/Glenfiddich.jpg', industry: 'Beverages' },
+  { id: 7, name: 'Glenfiddich', logo: '/images/Glen.svg', industry: 'Beverages' },
   { id: 8, name: 'Balvenie', logo: '/images/balvenie.png', industry: 'Beverages' },
   { id: 9, name: 'Louie 13', logo: '/images/louie.svg', industry: 'Beverages' },
   { id: 10, name: 'TravelBeta', logo: '/images/travelbeta.png', industry: 'Travel' },
   { id: 11, name: 'Scheweppes', logo: '/images/schweppes.png', industry: 'Beverages' },
-  { id: 12, name: 'Coca-Cola', logo: '/images/coke.jpg', industry: 'Beverages' },
+  { id: 12, name: 'Coca-Cola', logo: '/images/Coca-Cola_logo.svg', industry: 'Beverages' },
 ];
 
 // Group clients by industry
@@ -42,10 +41,10 @@ const ClientGrid = () => {
                   className="bg-gray-00 bg-opacity-50 flex items-center justify-center aspect-video"
                 >
                   <div className="relative h-12 w-full transition-all duration-300">
-                    <img
+                    <Image
                       src={client.logo}
                       alt={client.name}
-                      // fill
+                      fill
                       sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 16vw"
                       className="object-contain"
                     />
