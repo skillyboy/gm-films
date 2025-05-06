@@ -1,4 +1,5 @@
-import Image from 'next/image';
+/* eslint-disable @next/next/no-img-element */
+// import Image from 'next/image';
 
 // Sample client data
 const clients = [
@@ -41,10 +42,10 @@ const ClientGrid = () => {
                   className="bg-gray-00 bg-opacity-50 flex items-center justify-center aspect-video"
                 >
                   <div className="relative h-12 w-full transition-all duration-300">
-                    <Image
+                    <img
                       src={client.logo}
                       alt={client.name}
-                      fill
+                      // fill
                       sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 16vw"
                       className="object-contain"
                     />
