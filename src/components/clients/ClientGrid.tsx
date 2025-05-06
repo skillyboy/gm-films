@@ -35,9 +35,9 @@ const ClientGrid = () => {
           <div key={industry} className="mb-16">
             <h2 className="text-2xl font-bold mb-8 pb-2 border-b border-gray-800">{industry}</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-              {clientsByIndustry[industry].map((client) => (
+              {clientsByIndustry[industry].map((client, index) => (
                 <div 
-                  key={client.id} 
+                  key={index} 
                   className="bg-gray-00 bg-opacity-50 flex items-center justify-center aspect-video"
                 >
                   <div className="relative h-12 w-full transition-all duration-300">
