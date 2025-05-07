@@ -1,4 +1,3 @@
-// import Image from 'next/image';
 import CeoProfile from '@/components/about/CeoProfile';
 import CompanyStory from '@/components/about/CompanyStory';
 
@@ -35,9 +34,6 @@ export default function AboutPage() {
 
       {/* Company Story */}
       <CompanyStory />
-      
-      {/* Team Section */}
-      
     </>
   );
 }

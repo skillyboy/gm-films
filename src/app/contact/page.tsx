@@ -109,8 +109,6 @@ export default function ContactPage() {
                 </div>
               </div>
               
-              {/* Google Map */}
-              
             </div>
             
             {/* Contact Form */}
