@@ -4,7 +4,7 @@ import Button from '@/components/common/Button';
 const clients = [
   { id: 2, name: 'evenintheday', logo: '/images/evenintheday.png' },
   { id: 3, name: 'Balvenie', logo: '/images/balvenie.png' },
-  { id: 5, name: 'CocaCola', logo: '/images/CocaCola.png' },
+  { id: 5, name: 'CocaCola', logo: '/images/Coca-Cola_logo.svg' },
   { id: 6, name: 'Fanta', logo: '/images/fanta.png' },
 ];
 
