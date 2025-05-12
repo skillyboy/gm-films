@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import HeroBanner from '@/components/home/HeroBanner';
 import PortfolioPreview from '@/components/home/PortfolioPreview';
 import ClientsSection from '@/components/home/ClientsSection';
@@ -29,11 +28,26 @@ export default function Home() {
                 About Us
               </Button>
             </div>
-            <div className="w-full md:w-1/2">
-              <div className="rounded-lg overflow-hidden flex justify-center">
-                <img src={'/images/clapperboard.png'} className='w-[200px] h-[250px] lg:w-[300px] lg:h-[350px]' alt=''/>
+
+          <div className="w-full md:w-1/2 mt-10 md:mt-0 md:pr-12">
+              <div className="relative">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
+                    <div className="w-full h-full bg-[url('/images/bts-5.jpg')] bg-cover bg-center"></div>
+                  </div>
+                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden translate-y-8">
+                    <div className="w-full h-full bg-[url('/images/bts-2.jpg')] bg-cover bg-center"></div>
+                  </div>
+                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden -translate-y-8">
+                    <div className="w-full h-full bg-[url('/images/bts-3.jpg')] bg-cover bg-center"></div>
+                  </div>
+                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
+                    <div className="w-full h-full bg-[url('/images/bts-6.jpg')] bg-cover bg-center"></div>
+                  </div>
+                </div>
               </div>
-            </div>
+          </div>
+
           </div>
         </div>
       </section>

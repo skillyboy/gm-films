@@ -1,3 +1,7 @@
+'use client';
+
+import { motion } from 'framer-motion';
+
 const equipments = [
     {
       "item": "Drone (mini 4 pro)",
@@ -29,11 +33,11 @@ const equipments = [
     },
     {
       "item": "Matt Light (falcon eye) 2x2",
-      "price": "25,000"
+      "price": "30,000"
     },
     {
       "item": "Matt Light with C-stand",
-      "price": "30,000"
+      "price": "35,000"
     },
     {
       "item": "Small Stick Light",
@@ -73,7 +77,7 @@ const equipments = [
     },
     {
       "item": "Sigma (2) 24-70mm lens (per day)",
-      "price": "30,000"
+      "price": "40,000"
     },
     {
       "item": "35mm Lens (per day)",
@@ -97,7 +101,7 @@ const equipments = [
     },
     {
       "item": "PyroSeven Transmitter, Receiver & Screen Box Set",
-      "price": "70,000"
+      "price": "60,000"
     },
     {
       "item": "PyroSeven Set with Stand",
@@ -112,6 +116,10 @@ const equipments = [
       "price": "60,000"
     },
     {
+      "item": "Sony GMiii 70-200mm",
+      "price": "50,000"
+    },
+    {
       "item": "Hollyland Comms",
       "price": "150,000"
     },
@@ -119,11 +127,23 @@ const equipments = [
       "item": "Sony A7S3 Body Only",
       "price": "50,000"
     },
+    {
+      "item": "Sand Bag",
+      "price": "2,000"
+    },
+    {
+      "item": "DJI RS 4 pro combo",
+      "price": "50,000"
+    },
 ]
 
 export default function EquipmentPage() {
   return (
-    <>
+    <motion.section
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+    >
       {/* Equipment Hero */}
       <section className="relative pt-32 pb-16 bg-gray-900">
         <div className="absolute inset-0 overflow-hidden">
@@ -180,6 +200,6 @@ export default function EquipmentPage() {
           </div>
         </div>
       </section>
-    </>
+    </motion.section>
   );
 }

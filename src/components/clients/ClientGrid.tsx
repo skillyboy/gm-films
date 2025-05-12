@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 // Sample client data
 const clients = [
-  // { id: 1, name: 'CocaCola', logo: '/images/clients/client-1.svg', industry: 'Entertainment' },
+  { id: 1, name: 'Sun king', logo: '/images/sun king.png', industry: 'Technology' },
   { id: 2, name: 'Fanta', logo: '/images/fanta.png', industry: 'Beverages' },
   { id: 3, name: 'OctaFx', logo: '/images/octa.png', industry: 'Technology' },
   { id: 4, name: 'International Breweries', logo: '/images/intl-breweries.svg', industry: 'Beverages' },

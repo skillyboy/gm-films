@@ -5,7 +5,6 @@ import './globals.css';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 
-// Configure fonts
 const inter = Inter({ 
   subsets: ['latin'], 
   variable: '--font-inter',
@@ -37,7 +36,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${montserrat.variable} bg-black text-white min-h-screen flex flex-col`}>
         <Header />
-        <main className="flex-grow">{children}</main>
+          <main className="flex-grow">
+              {children}
+          </main>
         <Footer />
       </body>
     </html>

@@ -1,15 +1,22 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import CategoryFilter from '@/components/portfolio/CategoryFilter';
 import PortfolioGallery from '@/components/portfolio/PortfolioGallery';
 
 export default function PortfolioPage() {
   return (
-    <>
+    <motion.section
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+    >
       {/* Portfolio Hero */}
       <section className="relative pt-32 pb-16 bg-gray-900">
         <div className="absolute inset-0 overflow-hidden">
           <div 
-            className="absolute inset-0 bg-cover bg-center opacity-20"
-            style={{ backgroundImage: 'url("/images/portfolio/portfolio-hero.jpg")' }}
+            className="absolute inset-0 bg-cover bg-center opacity-50"
+            style={{ backgroundImage: 'url("/images/pattern.png")' }}
           ></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black via-black/70 to-gray-900"></div>
         </div>
@@ -34,6 +41,6 @@ export default function PortfolioPage() {
           <PortfolioGallery />
         </div>
       </section>
-    </>
+    </motion.section>
   );
 }
