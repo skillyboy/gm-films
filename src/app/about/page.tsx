@@ -16,7 +16,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center opacity-50"
-            style={{ backgroundImage: 'url("/images/pattern.png")' }}
+            style={{ backgroundImage: 'url("/images/Pattern.png")' }}
           ></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black via-black/70 to-gray-900"></div>
         </div>
