@@ -111,6 +111,8 @@ module.exports = nextConfig;
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "critters": "^0.0.23",
+    "framer-motion": "^12.11.0",
     "next": "15.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -146,6 +148,30 @@ export default config;
 
 This is a binary file of the type: Image
 
+# public/images/bts-1.jpg
+
+This is a binary file of the type: Image
+
+# public/images/bts-2.jpg
+
+This is a binary file of the type: Image
+
+# public/images/bts-3.jpg
+
+This is a binary file of the type: Image
+
+# public/images/bts-4.jpg
+
+This is a binary file of the type: Image
+
+# public/images/bts-5.jpg
+
+This is a binary file of the type: Image
+
+# public/images/bts-6.jpg
+
+This is a binary file of the type: Image
+
 # public/images/bts.jpg
 
 This is a binary file of the type: Image
@@ -158,7 +184,15 @@ This is a binary file of the type: Image
 
 This is a binary file of the type: Image
 
-# public/images/CocaCola.png
+# public/images/clapperboard.png
+
+This is a binary file of the type: Image
+
+# public/images/Coca-Cola_logo.svg
+
+This is a file of the type: SVG Image
+
+# public/images/coke.JPG
 
 This is a binary file of the type: Image
 
@@ -170,19 +204,55 @@ This is a binary file of the type: Image
 
 This is a binary file of the type: Image
 
+# public/images/equipment-hero.jpg
+
+This is a binary file of the type: Image
+
+# public/images/evenintheday.png
+
+This is a binary file of the type: Image
+
 # public/images/fanta.png
 
 This is a binary file of the type: Image
 
-# public/images/glenfiddich.png
+# public/images/glenf.png
 
 This is a binary file of the type: Image
+
+# public/images/intl-breweries.svg
+
+This is a file of the type: SVG Image
 
 # public/images/Logo-mark.png
 
 This is a binary file of the type: Image
 
+# public/images/louie.svg
+
+This is a file of the type: SVG Image
+
+# public/images/mbp-logo-white.svg
+
+This is a file of the type: SVG Image
+
+# public/images/octa.png
+
+This is a binary file of the type: Image
+
+# public/images/Pattern.png
+
+This is a binary file of the type: Image
+
 # public/images/Primary logo.png
+
+This is a binary file of the type: Image
+
+# public/images/schweppes.png
+
+This is a binary file of the type: Image
+
+# public/images/sun king.png
 
 This is a binary file of the type: Image
 
@@ -235,19 +305,25 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 # src/app/about/page.tsx
 
 ```tsx
-import Image from 'next/image';
+'use client';
+
+import { motion } from 'framer-motion';
 import CeoProfile from '@/components/about/CeoProfile';
 import CompanyStory from '@/components/about/CompanyStory';
 
 export default function AboutPage() {
   return (
-    <>
+    <motion.section
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+    >
       {/* About Hero */}
       <section className="relative pt-32 pb-16 bg-gray-900">
         <div className="absolute inset-0 overflow-hidden">
           <div 
-            className="absolute inset-0 bg-cover bg-center opacity-20"
-            style={{ backgroundImage: 'url("/images/about/about-hero.jpg")' }}
+            className="absolute inset-0 bg-cover bg-center opacity-50"
+            style={{ backgroundImage: 'url("/images/Pattern.png")' }}
           ></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black via-black/70 to-gray-900"></div>
         </div>
@@ -257,7 +333,7 @@ export default function AboutPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-montserrat">
               About <span className="text-[#3A6E71]">GMFILMS</span>
             </h1>
-            <p className="text-xl text-gray-300">
+            <p className="lg:text-xl text-gray-300">
               Learn about our company, our journey, and the passion that drives us to create 
               exceptional visual stories.
             </p>
@@ -265,17 +341,12 @@ export default function AboutPage() {
         </div>
       </section>
       
-      
-      
       {/* CEO Profile */}
       <CeoProfile />
 
       {/* Company Story */}
       <CompanyStory />
-      
-      {/* Team Section */}
-      
-    </>
+    </motion.section>
   );
 }
 ```
@@ -283,19 +354,24 @@ export default function AboutPage() {
 # src/app/clients/page.tsx
 
 ```tsx
-import Image from 'next/image';
+'use client';
+
+import { motion } from 'framer-motion';
 import ClientGrid from '@/components/clients/ClientGrid';
-import ClientTestimonial from '@/components/clients/ClientTestimonial';
 
 export default function ClientsPage() {
   return (
-    <>
+    <motion.section
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+    >
       {/* Clients Hero */}
       <section className="relative pt-32 pb-16 bg-gray-900">
         <div className="absolute inset-0 overflow-hidden">
           <div 
-            className="absolute inset-0 bg-cover bg-center opacity-20"
-            style={{ backgroundImage: 'url("/images/clients/clients-hero.jpg")' }}
+            className="absolute inset-0 bg-cover bg-center opacity-50"
+            style={{ backgroundImage: 'url("/images/Pattern.png")' }}
           ></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black via-black/70 to-gray-900"></div>
         </div>
@@ -305,7 +381,7 @@ export default function ClientsPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-montserrat">
               Our <span className="text-[#3A6E71]">Clients</span>
             </h1>
-            <p className="text-xl text-gray-300">
+            <p className="lg:text-xl text-gray-300">
               We&apos;ve had the privilege of working with renowned brands and talented individuals 
               across various industries.
             </p>
@@ -315,96 +391,7 @@ export default function ClientsPage() {
       
       {/* Client Grid */}
       <ClientGrid />
-      
-      {/* Featured Case Study */}
-      <section className="py-20 bg-black">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-10 md:mb-0">
-              <div className="relative aspect-video overflow-hidden">
-                <Image
-                  src="/images/clients/case-study.jpg"
-                  alt="Featured case study with Nike"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full bg-[#3A6E71] flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8 5.14V19.14L19 12.14L8 5.14Z" fill="currentColor" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="md:w-1/2 md:pl-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 font-montserrat">
-                Featured <span className="text-[#3A6E71]">Case Study</span>
-              </h2>
-              <p className="text-gray-300 mb-6 text-lg">
-                Nike - &quot;Beyond Limits&quot; Campaign
-              </p>
-              <p className="text-gray-300 mb-6">
-                We collaborated with Nike to create a dynamic commercial for their latest product line, 
-                showcasing athletes pushing beyond their limits in visually stunning environments.
-              </p>
-              <p className="text-gray-300 mb-8">
-                Our team handled the entire production process, from concept development to final delivery, 
-                resulting in a campaign that exceeded expectations and resonated with audiences worldwide.
-              </p>
-              {/* <button className="inline-flex items-center text-white hover:text-[#3A6E71] transition-colors">
-                <span className="mr-2">View Full Case Study</span>
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </button> */}
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Testimonials */}
-      <section className="py-20 bg-gray-900">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-montserrat">
-              Client <span className="text-[#3A6E71]">Testimonials</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Here&apos;s what our clients have to say about working with GMFILMS.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ClientTestimonial
-              quote="GMFILMS delivered beyond our expectations. Their creative vision and technical prowess transformed our concept into a stunning visual narrative."
-              author="Sarah Williams"
-              position="Marketing Director"
-              company="Nike"
-              image="/images/clients/testimonial-1.jpg"
-            />
-            
-            <ClientTestimonial
-              quote="Working with GMFILMS was seamless from start to finish. Their attention to detail and commitment to quality is unmatched in the industry."
-              author="Michael Chen"
-              position="Creative Lead"
-              company="Sony Music"
-              image="/images/clients/testimonial-2.jpg"
-            />
-            
-            <ClientTestimonial
-              quote="The team at GMFILMS brought our vision to life with creativity and precision. They're not just service providers, but true creative partners."
-              author="Emily Rodriguez"
-              position="Brand Manager"
-              company="Adidas"
-              image="/images/clients/testimonial-3.jpg"
-            />
-          </div>
-        </div>
-      </section>
-    </>
+    </motion.section>
   );
 }
 ```
@@ -412,17 +399,24 @@ export default function ClientsPage() {
 # src/app/contact/page.tsx
 
 ```tsx
+'use client';
+
+import { motion } from 'framer-motion';
 import ContactForm from '@/components/contact/ContactForm';
 
 export default function ContactPage() {
   return (
-    <>
+    <motion.section
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+    >
       {/* Contact Hero */}
       <section className="relative pt-32 pb-16 bg-gray-900">
         <div className="absolute inset-0 overflow-hidden">
           <div 
-            className="absolute inset-0 bg-cover bg-center opacity-20"
-            style={{ backgroundImage: 'url("/images/contact/contact-hero.jpg")' }}
+            className="absolute inset-0 bg-cover bg-center opacity-50"
+            style={{ backgroundImage: 'url("/images/Pattern.png")' }}
           ></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black via-black/70 to-gray-900"></div>
         </div>
@@ -432,7 +426,7 @@ export default function ContactPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-montserrat">
               Get In <span className="text-[#3A6E71]">Touch</span>
             </h1>
-            <p className="text-xl text-gray-300">
+            <p className="lg:text-xl text-gray-300">
               Have a project in mind or questions about our services? We&apos;d love to hear from you.
             </p>
           </div>
@@ -523,8 +517,6 @@ export default function ContactPage() {
                 </div>
               </div>
               
-              {/* Google Map */}
-              
             </div>
             
             {/* Contact Form */}
@@ -532,25 +524,188 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-    </>
+    </motion.section>
   );
 }
 ```
 
-# src/app/equipment/page.tsx
+# src/app/equipments/layout.tsx
 
 ```tsx
-import EquipmentList from '@/components/equipment/EquipmentList';
+import type { Metadata } from 'next';
+
+
+export const metadata: Metadata = {
+  title: 'GMFILMS | Equipment Rental',
+  description: 'Equipment rental for every need',
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <div>{children}</div>
+  );
+}
+```
+
+# src/app/equipments/page.tsx
+
+```tsx
+'use client';
+
+import { motion } from 'framer-motion';
+
+const equipments = [
+    {
+      "item": "Drone (mini 4 pro)",
+      "price": "150,000 (pilot inclusive)"
+    },
+    {
+      "item": "GoPro 12 (per day rental)",
+      "price": "30,000"
+    },
+    {
+      "item": "Sony FX30 (Body Only)",
+      "price": "30,000"
+    },
+    {
+      "item": "Sony A7Siii (Body Only)",
+      "price": "50,000"
+    },
+    {
+      "item": "Tripod",
+      "price": "10,000"
+    },
+    {
+      "item": "GoPro 12 with full kit (per day)",
+      "price": "50,000"
+    },
+    {
+      "item": "Drone (mini 4 pro)",
+      "price": "150,000 (pilot inclusive)"
+    },
+    {
+      "item": "Matt Light (falcon eye) 2x2",
+      "price": "30,000"
+    },
+    {
+      "item": "Matt Light with C-stand",
+      "price": "35,000"
+    },
+    {
+      "item": "Small Stick Light",
+      "price": "5,000"
+    },
+    {
+      "item": "Stick Light with Stand",
+      "price": "10,000"
+    },
+    {
+      "item": "Small LED Light",
+      "price": "10,000"
+    },
+    {
+      "item": "Small LED Light with Stand",
+      "price": "15,000"
+    },
+    {
+      "item": "SL60 with C-Stand",
+      "price": "30,000"
+    },
+    {
+      "item": "Magic Arm & Clamp",
+      "price": "10,000"
+    },
+    {
+      "item": "C-Stand (per unit)",
+      "price": "5,000"
+    },
+    {
+      "item": "Rode Lapel Microphone",
+      "price": "20,000"
+    },
+    {
+      "item": "Zoom Recorder",
+      "price": "20,000"
+    },
+    {
+      "item": "Sigma (2) 24-70mm lens (per day)",
+      "price": "40,000"
+    },
+    {
+      "item": "35mm Lens (per day)",
+      "price": "20,000"
+    },
+    {
+      "item": "16mm Lens (per day)",
+      "price": "15,000"
+    },
+    {
+      "item": "ND Filter Set",
+      "price": "35,000"
+    },
+    {
+      "item": "ND Filter (Single Piece)",
+      "price": "15,000"
+    },
+    {
+      "item": "PyroSeven (single piece)",
+      "price": "15,000"
+    },
+    {
+      "item": "PyroSeven Transmitter, Receiver & Screen Box Set",
+      "price": "60,000"
+    },
+    {
+      "item": "PyroSeven Set with Stand",
+      "price": "65,000"
+    },
+    {
+      "item": "Sony FX30 with one lense",
+      "price": "50,000"
+    },
+    {
+      "item": "Sony FX30 with two lense",
+      "price": "60,000"
+    },
+    {
+      "item": "Sony GM ii 70-200mm",
+      "price": "50,000"
+    },
+    {
+      "item": "Hollyland Comms",
+      "price": "150,000"
+    },
+    {
+      "item": "Insta 360x4",
+      "price": "40,000"
+    },
+    {
+      "item": "Sand Bag",
+      "price": "2,000"
+    },
+    {
+      "item": "DJI RS 4 pro combo",
+      "price": "50,000"
+    },
+]
 
 export default function EquipmentPage() {
   return (
-    <>
+    <motion.section
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+    >
       {/* Equipment Hero */}
       <section className="relative pt-32 pb-16 bg-gray-900">
         <div className="absolute inset-0 overflow-hidden">
           <div 
-            className="absolute inset-0 bg-cover bg-center opacity-20"
-            style={{ backgroundImage: 'url("/images/equipment/equipment-hero.jpg")' }}
+            className="absolute inset-0 bg-cover bg-center opacity-80"
+            style={{ backgroundImage: 'url("/images/equipment-hero.jpg")' }}
           ></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black via-black/70 to-gray-900"></div>
         </div>
@@ -560,100 +715,34 @@ export default function EquipmentPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-montserrat">
               Equipment <span className="text-[#3A6E71]">Rental</span>
             </h1>
-            <p className="text-xl text-gray-300">
+            <p className="lg:text-xl text-gray-300">
               Access professional cinematography equipment for your projects. We offer a wide range of 
               cameras, lenses, lighting setups, and accessories.
             </p>
           </div>
         </div>
       </section>
-      
-      {/* Rental Information */}
-      <section className="py-16 bg-gray-900">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="bg-gray-800 bg-opacity-50 p-8 md:p-12 mb-12">
-            <h2 className="text-2xl font-bold mb-6">Rental Information</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div>
-                <h3 className="text-lg font-semibold mb-4 flex items-center">
-                  <svg className="w-6 h-6 mr-2 text-[#3A6E71]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  Rental Period
-                </h3>
-                <p className="text-gray-300">
-                  Our standard rental period is 24 hours (1 day). We also offer weekend, weekly, and monthly rates.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-4 flex items-center">
-                  <svg className="w-6 h-6 mr-2 text-[#3A6E71]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-                  </svg>
-                  Payment
-                </h3>
-                <p className="text-gray-300">
-                  We accept credit/debit cards and bank transfers. A security deposit is required for all rentals.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-4 flex items-center">
-                  <svg className="w-6 h-6 mr-2 text-[#3A6E71]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                  Insurance
-                </h3>
-                <p className="text-gray-300">
-                  All renters must provide proof of insurance coverage for rented equipment.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-4 flex items-center">
-                  <svg className="w-6 h-6 mr-2 text-[#3A6E71]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  Reservations
-                </h3>
-                <p className="text-gray-300">
-                  Equipment should be reserved at least 48 hours in advance to ensure availability.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-4 flex items-center">
-                  <svg className="w-6 h-6 mr-2 text-[#3A6E71]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                  </svg>
-                  Pickup & Return
-                </h3>
-                <p className="text-gray-300">
-                  Equipment can be picked up and returned at our studio during business hours (9 AM - 6 PM).
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-4 flex items-center">
-                  <svg className="w-6 h-6 mr-2 text-[#3A6E71]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                  </svg>
-                  Cancellation
-                </h3>
-                <p className="text-gray-300">
-                  Cancellations must be made at least 24 hours before the scheduled pickup time to avoid fees.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+
+      <section className="py-16 px-4 text-[#919191]">
+        <ul className="gap-[16px] flex flex-col container mx-auto font-sans">
+          {
+            equipments.map((equipment, index) => {
+              return (
+                <li key={index}>
+                  {equipment.item} - ₦{equipment.price}
+                </li>
+              )
+            })
+          }
+        </ul>
       </section>
-      
-      {/* Equipment List */}
-      <EquipmentList />
       
       {/* Contact for Rental */}
       <section className="py-16 bg-black">
         <div className="container mx-auto px-4 md:px-6">
           <div className="bg-gray-900 p-8 md:p-12 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">Ready to Rent Equipment?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">Ready to Rent Equipments?</h2>
+            <p className="md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Contact us to check availability, discuss your specific requirements, or schedule a rental.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -663,17 +752,11 @@ export default function EquipmentPage() {
               >
                 Contact Us
               </a>
-              <a 
-                href="#equipment-list" 
-                className="inline-flex items-center justify-center px-6 py-3 border-2 border-[#3A6E71] text-white hover:bg-red-600/10 text-sm font-medium tracking-wider uppercase transition-all duration-200"
-              >
-                View Equipment
-              </a>
             </div>
           </div>
         </div>
       </section>
-    </>
+    </motion.section>
   );
 }
 ```
@@ -698,13 +781,13 @@ body {
   @apply bg-black text-white;
 }
 
-/* h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   @apply font-montserrat;
-} */
+}
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 3px;
 }
 
 ::-webkit-scrollbar-track {
@@ -715,9 +798,9 @@ body {
   @apply bg-[#3A6E71];
 }
 
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
   @apply bg-red-700;
-}
+} */
 
 /* Smooth fade-in animation for page transitions */
 @keyframes fadeIn {
@@ -731,9 +814,9 @@ body {
   }
 }
 
-main {
+/* main {
   animation: fadeIn 0.5s ease-in-out;
-}
+} */
 
 /* Custom utility classes */
 .text-shadow {
@@ -796,7 +879,6 @@ import './globals.css';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 
-// Configure fonts
 const inter = Inter({ 
   subsets: ['latin'], 
   variable: '--font-inter',
@@ -828,7 +910,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${montserrat.variable} bg-black text-white min-h-screen flex flex-col`}>
         <Header />
-        <main className="flex-grow">{children}</main>
+          <main className="flex-grow">
+              {children}
+          </main>
         <Footer />
       </body>
     </html>
@@ -839,29 +923,26 @@ export default function RootLayout({
 # src/app/page.tsx
 
 ```tsx
-// app/page.tsx
 import HeroBanner from '@/components/home/HeroBanner';
 import PortfolioPreview from '@/components/home/PortfolioPreview';
 import ClientsSection from '@/components/home/ClientsSection';
-import EquipmentSection from '@/components/home/EquipmentSection';
 import Button from '@/components/common/Button';
 
 export default function Home() {
   return (
     <>
-      <HeroBanner />
-      
+      <HeroBanner />   
       {/* About Section */}
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col md:flex-row items-center">
+          <div className="flex flex-col md:flex-row items-center justify-center">
             <div className="md:w-1/2 mb-10 md:mb-0 md:pr-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Cinematic Excellence<br/>
                 <span className="text-[#3A6E71]">Visual Storytelling</span>
               </h2>
               <p className="text-gray-300 mb-6 text-lg">
-                GMFILMS is a premier cinematography company dedicated to creating visually stunning narratives. 
+                GMFILMS is a premier film company dedicated to creating visually stunning narratives. 
                 Our expertise spans commercials, films, documentaries, music videos, and event coverage.
               </p>
               <p className="text-gray-300 mb-8">
@@ -872,27 +953,32 @@ export default function Home() {
                 About Us
               </Button>
             </div>
-            <div className="w-full md:w-1/2 grid grid-cols-2 gap-4">
-              <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden ">
-                <div className="w-full h-full bg-[url('/images/cut-scene.jpg')] bg-cover bg-center"></div>
+
+          <div className="w-full md:w-1/2 mt-10 md:mt-0 md:pr-12">
+              <div className="relative">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
+                    <div className="w-full h-full bg-[url('/images/bts-5.jpg')] bg-cover bg-center"></div>
+                  </div>
+                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden translate-y-8">
+                    <div className="w-full h-full bg-[url('/images/bts-2.jpg')] bg-cover bg-center"></div>
+                  </div>
+                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden -translate-y-8">
+                    <div className="w-full h-full bg-[url('/images/bts-3.jpg')] bg-cover bg-center"></div>
+                  </div>
+                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
+                    <div className="w-full h-full bg-[url('/images/bts-6.jpg')] bg-cover bg-center"></div>
+                  </div>
+                </div>
               </div>
-              {/* <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden translate-y-8">
-                <div className="w-full h-full bg-[url('/images/behind-scenes-2.jpg')] bg-cover bg-center"></div>
-              </div> */}
-              {/* <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden -translate-y-8 ">
-                <div className="w-full h-full bg-[url('/images/cut-scene.jpg')] bg-cover bg-center"></div>
-              </div> */}
-              <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
-                <div className="w-full h-full bg-[url('/images/bts.jpg')] bg-cover bg-center"></div>
-              </div>
-            </div>
+          </div>
+
           </div>
         </div>
       </section>
       
       <PortfolioPreview />
       <ClientsSection />
-      <EquipmentSection />
       
       {/* CTA Section */}
       <section className="py-20 bg-gray-900">
@@ -900,7 +986,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Bring Your <span className="text-[#3A6E71]">Vision to Life</span>?
           </h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+          <p className="md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
             Let&apos;s collaborate to create stunning visuals that tell your story and captivate your audience.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -930,22 +1016,11 @@ const categories = [
   { id: 'commercials', name: 'Commercials' },
   { id: 'films', name: 'Films & Documentaries' },
   { id: 'music', name: 'Music Videos' },
-  { id: 'events', name: 'Event Coverage' },
+  { id: 'events', name: 'Event' },
 ];
 
-interface CategoryPageProps {
-  params: {
-    category: string;
-  };
-}
-
-export function generateStaticParams() {
-  return categories.map((category) => ({
-    category: category.id,
-  }));
-}
-
-export default function CategoryPage({ params }: CategoryPageProps) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function CategoryPage({ params }: any) {
   const category = categories.find((cat) => cat.id === params.category);
   
   if (!category) {
@@ -986,23 +1061,36 @@ export default function CategoryPage({ params }: CategoryPageProps) {
     </>
   );
 }
+
+export function generateStaticParams() {
+  return categories.map((category) => ({
+    category: category.id,
+  }));
+}
 ```
 
 # src/app/portfolio/page.tsx
 
 ```tsx
+'use client';
+
+import { motion } from 'framer-motion';
 import CategoryFilter from '@/components/portfolio/CategoryFilter';
 import PortfolioGallery from '@/components/portfolio/PortfolioGallery';
 
 export default function PortfolioPage() {
   return (
-    <>
+    <motion.section
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+    >
       {/* Portfolio Hero */}
       <section className="relative pt-32 pb-16 bg-gray-900">
         <div className="absolute inset-0 overflow-hidden">
           <div 
-            className="absolute inset-0 bg-cover bg-center opacity-20"
-            style={{ backgroundImage: 'url("/images/portfolio/portfolio-hero.jpg")' }}
+            className="absolute inset-0 bg-cover bg-center opacity-50"
+            style={{ backgroundImage: 'url("/images/Pattern.png")' }}
           ></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black via-black/70 to-gray-900"></div>
         </div>
@@ -1012,7 +1100,7 @@ export default function PortfolioPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-montserrat">
               Our <span className="text-[#3A6E71]">Portfolio</span>
             </h1>
-            <p className="text-xl text-gray-300">
+            <p className="lg:text-xl text-gray-300">
               Explore our diverse collection of projects spanning commercials, films, documentaries, 
               music videos, and event coverage.
             </p>
@@ -1027,7 +1115,7 @@ export default function PortfolioPage() {
           <PortfolioGallery />
         </div>
       </section>
-    </>
+    </motion.section>
   );
 }
 
@@ -1047,21 +1135,30 @@ const CeoProfile = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 font-montserrat">
               Meet Our <span className="text-[#3A6E71]">CEO</span>
             </h2>
-            <p className="text-gray-300 mb-6 text-lg">
-              John Foster is the visionary leader behind GMFILMS, with over 15 years of 
-              experience in the film and cinematography industry.
+            <p className='text-lg'>Boluwatife Jayeoba (aka MaskThaDirector)</p>
+            <p className="text-gray-300 mb-6">
+              At just 25, Boluwatife Jayeoba, popularly known as MaskThaDirector, 
+              serves as the CEO and Head of Operations, bringing over 8 years of experience — 6 of them professionally — 
+              in media and film production. His journey began in 2016 on the streets, 
+              where a simple opportunity to hold a camera sparked a lifelong passion for visual storytelling.
             </p>
             <p className="text-gray-300 mb-6">
-              After graduating from the New York Film Academy, John worked on numerous 
-              high-profile projects for major studios before founding GMFILMS in 2015.
+              What started as a love for photography quickly evolved into a deep admiration for the world of video production. 
+              Boluwatife was drawn not just to the camera, but to the intricate collaboration of departments — from lighting to direction — 
+              that bring stories to life. “It takes a village to raise a child,” he often says, a philosophy that mirrors his appreciation for teamwork on set.
             </p>
-            <p className="text-gray-300">
-              His passion for visual storytelling and commitment to technical excellence 
-              has established GMFILMS as a leading name in the industry. John personally 
-              oversees each project, ensuring the highest quality standards are maintained.
+            <p className="text-gray-300 mb-6">
+              Known for his bold and colorful visual style, Boluwatife’s creative vision — as MaskThaDirector — 
+              revolves around mise-en-scène: using single camera shots to communicate layered narratives. 
+              He crafts content that’s fun, contrast-rich, and emotionally engaging, 
+              always aiming to reflect a brand’s identity in a way that resonates deeply with its audience.
+            </p>
+            <p className='text-gray-300'>
+              With passion, precision, and a fearless approach to creativity, MaskThaDirector leads the team in producing visual experiences that don’t just look good — 
+              they leave a lasting impact.
             </p>
             
-            <div className="mt-8 flex items-center">
+            {/* <div className="mt-8 flex items-center">
               <div className="mr-4">
                 <svg className="w-8 h-8 text-[#3A6E71]" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
@@ -1071,7 +1168,7 @@ const CeoProfile = () => {
                 <p className="font-semibold">Watch John&apos;s director&apos;s reel</p>
                 <p className="text-sm text-gray-400">Discover his unique visual style</p>
               </div>
-            </div>
+            </div> */}
           </div>
           
           <div className="md:w-1/2 w-full">
@@ -1079,7 +1176,7 @@ const CeoProfile = () => {
               <div className="aspect-[3/4] max-w-md relative z-10 mx-auto">
                 <Image
                   src="/images/ceo-portrait.jpg"
-                  alt="John Foster - CEO of GMFILMS"
+                  alt="Boluwatife Jayeoba - CEO of GMFILMS"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover border-2 border-[#3A6E71]"
@@ -1106,20 +1203,20 @@ const CompanyStory = () => {
     <section className="py-20 bg-gray-900">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col-reverse md:flex-row items-center">
-          <div className="md:w-1/2 mt-10 md:mt-0 md:pr-12">
+          <div className="w-full md:w-1/2 mt-10 md:mt-0 md:pr-12">
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
                 <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
-                  <div className="w-full h-full bg-[url('/images/about/company-1.jpg')] bg-cover bg-center"></div>
+                  <div className="w-full h-full bg-[url('/images/bts-1.jpg')] bg-cover bg-center"></div>
                 </div>
                 <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden translate-y-8">
-                  <div className="w-full h-full bg-[url('/images/about/company-2.jpg')] bg-cover bg-center"></div>
+                  <div className="w-full h-full bg-[url('/images/bts-2.jpg')] bg-cover bg-center"></div>
                 </div>
                 <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden -translate-y-8">
-                  <div className="w-full h-full bg-[url('/images/about/company-3.jpg')] bg-cover bg-center"></div>
+                  <div className="w-full h-full bg-[url('/images/bts-3.jpg')] bg-cover bg-center"></div>
                 </div>
                 <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
-                  <div className="w-full h-full bg-[url('/images/about/company-4.jpg')] bg-cover bg-center"></div>
+                  <div className="w-full h-full bg-[url('/images/bts-4.jpg')] bg-cover bg-center"></div>
                 </div>
               </div>
             </div>
@@ -1129,24 +1226,24 @@ const CompanyStory = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 font-montserrat">
               Our <span className="text-[#3A6E71]">Story</span>
             </h2>
-            <p className="text-gray-300 mb-6 text-lg">
+            {/* <p className="text-gray-300 mb-6 text-lg">
               Founded in 2015, GMFILMS began as a small team of passionate filmmakers dedicated 
               to creating powerful visual narratives.
-            </p>
+            </p> */}
             <p className="text-gray-300 mb-6">
-              What started as a boutique cinematography studio quickly grew into a comprehensive 
-              production company, as our commitment to quality and creative excellence attracted 
-              clients from various industries.
-            </p>
-            <p className="text-gray-300 mb-6">
-              Over the years, we&apos;ve expanded our services to include equipment rental, providing 
-              fellow filmmakers with access to professional gear. We&apos;ve had the privilege of working 
-              with renowned brands, studios, and artists on projects that have reached global audiences.
+              At just 18, when the idea of starting a production company seemed out of reach, GMFilms was born from a bold belief: 
+              defy the odds. Inspired by a relentless drive to deliver excellence, Gorilla Mentality became more than just a name — 
+              it became our mindset. It’s about pushing limits, setting new standards, and consistently delivering top-tier 
+              visual content to our clients and audiences.
             </p>
             <p className="text-gray-300">
+              Today, GMFilms stands as a creative force, fueled by passion, resilience, and a commitment to high-quality production 
+              that speaks for itself.
+            </p>
+            {/* <p className="text-gray-300">
               Today, GMFILMS continues to push creative boundaries, combining technical expertise 
               with artistic vision to deliver exceptional visual content for our clients.
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
@@ -1164,18 +1261,18 @@ import Image from 'next/image';
 
 // Sample client data
 const clients = [
-  // { id: 1, name: 'CocaCola', logo: '/images/clients/client-1.svg', industry: 'Entertainment' },
-  { id: 2, name: 'Fanta', logo: '/images/clients/client-2.svg', industry: 'Beverages' },
-  { id: 3, name: 'OctaFx', logo: '/images/clients/client-3.svg', industry: 'Technology' },
-  { id: 4, name: 'International Breweries', logo: '/images/clients/client-4.svg', industry: 'Beverages' },
-  { id: 5, name: 'Eveninday', logo: '/images/clients/client-5.svg', industry: 'Entertainment' },
-  { id: 6, name: 'MainlandBlock', logo: '/images/clients/client-6.svg', industry: 'Entertainment' },
-  { id: 7, name: 'Glenfiddich', logo: '/images/clients/client-7.svg', industry: 'Beverages' },
-  { id: 8, name: 'Balvenie', logo: '/images/clients/client-8.svg', industry: 'Beverages' },
-  { id: 9, name: 'Louie 13', logo: '/images/clients/client-9.svg', industry: 'Beverages' },
-  { id: 10, name: 'TravelBeta', logo: '/images/clients/client-10.svg', industry: 'Travel' },
-  { id: 11, name: 'Scheweppes', logo: '/images/clients/client-11.svg', industry: 'Beverages' },
-  { id: 12, name: 'Coca-Cola', logo: '/images/clients/client-12.svg', industry: 'Beverages' },
+  { id: 1, name: 'Sun king', logo: '/images/sun king.png', industry: 'Technology' },
+  { id: 2, name: 'Fanta', logo: '/images/fanta.png', industry: 'Beverages' },
+  { id: 3, name: 'OctaFx', logo: '/images/octa.png', industry: 'Technology' },
+  { id: 4, name: 'International Breweries', logo: '/images/intl-breweries.svg', industry: 'Beverages' },
+  { id: 5, name: 'Evenintheday', logo: '/images/evenintheday.png', industry: 'Entertainment' },
+  { id: 6, name: 'MainlandBlock', logo: '/images/mbp-logo-white.svg', industry: 'Entertainment' },
+  { id: 7, name: 'Glenfiddich', logo: '/images/glenf.png', industry: 'Beverages' },
+  { id: 8, name: 'Balvenie', logo: '/images/balvenie.png', industry: 'Beverages' },
+  { id: 9, name: 'Louie 13', logo: '/images/louie.svg', industry: 'Beverages' },
+  { id: 10, name: 'TravelBeta', logo: '/images/travelbeta.png', industry: 'Travel' },
+  { id: 11, name: 'Scheweppes', logo: '/images/schweppes.png', industry: 'Beverages' },
+  { id: 12, name: 'Coca-Cola', logo: '/images/Coca-Cola_logo.svg', industry: 'Beverages' },
 ];
 
 // Group clients by industry
@@ -1196,13 +1293,13 @@ const ClientGrid = () => {
         {industries.map((industry) => (
           <div key={industry} className="mb-16">
             <h2 className="text-2xl font-bold mb-8 pb-2 border-b border-gray-800">{industry}</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-              {clientsByIndustry[industry].map((client) => (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 red">
+              {clientsByIndustry[industry].map((client, index) => (
                 <div 
-                  key={client.id} 
-                  className="bg-gray-800 bg-opacity-50 p-6 flex items-center justify-center aspect-video"
+                  key={index} 
+                  className="bg-gray-00 bg-opacity-50 flex items-center justify-center aspect-video"
                 >
-                  <div className="relative h-12 w-full opacity-80 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                  <div className="relative h-12 w-full transition-all duration-300">
                     <Image
                       src={client.logo}
                       alt={client.name}
@@ -1222,55 +1319,6 @@ const ClientGrid = () => {
 };
 
 export default ClientGrid;
-```
-
-# src/components/clients/ClientTestimonial.tsx
-
-```tsx
-import Image from 'next/image';
-
-interface ClientTestimonialProps {
-  quote: string;
-  author: string;
-  position: string;
-  company: string;
-  image: string;
-}
-
-const ClientTestimonial = ({
-  quote,
-  author,
-  position,
-  company,
-  image,
-}: ClientTestimonialProps) => {
-  return (
-    <div className="bg-gray-800 bg-opacity-50 p-8 relative">
-      <div className="absolute top-8 left-8 text-4xl text-[#3A6E71] opacity-40">&quot;</div>
-      <div className="relative">
-        <p className="text-gray-300 mb-8 relative z-10">{quote}</p>
-        
-        <div className="flex items-center">
-          <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-            <Image
-              src={image}
-              alt={author}
-              fill
-              sizes="48px"
-              className="object-cover"
-            />
-          </div>
-          <div>
-            <h4 className="font-bold">{author}</h4>
-            <p className="text-sm text-gray-400">{position}, {company}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default ClientTestimonial;
 ```
 
 # src/components/common/Button.tsx
@@ -1361,7 +1409,7 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
                 <li><Link href="/clients" className="text-gray-400 hover:text-white transition-colors">Our Clients</Link></li>
-                <li><Link href="/equipment" className="text-gray-400 hover:text-white transition-colors">Equipment Rental</Link></li>
+                <li><Link href="/equipments" className="text-gray-400 hover:text-white transition-colors">Equipment Rental</Link></li>
                 <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
               </ul>
             </div>
@@ -1417,12 +1465,11 @@ export default Footer;
 # src/components/common/Header.tsx
 
 ```tsx
-// components/common/Header.tsx
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-// import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 const Header = () => {
@@ -1452,7 +1499,7 @@ const Header = () => {
     { name: 'Portfolio', path: '/portfolio' },
     { name: 'About', path: '/about' },
     { name: 'Clients', path: '/clients' },
-    { name: 'Equipment', path: '/equipment' },
+    // { name: 'Equipment', path: '/equipment' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -1465,10 +1512,6 @@ const Header = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <Link href="/" className="relative z-10">
-            {/* <h1 className="text-2xl font-bold font-montserrat tracking-wider">
-              <span className="text-white">GM</span>
-              <span className="text-red-600">FILMS</span>
-            </h1> */}
             <img src={'/images/Primary logo.png'} alt='logo' className='w-[120px]'/>
           </Link>
 
@@ -1520,10 +1563,32 @@ const Header = () => {
 
           {/* Mobile Menu */}
           <div
-            className={`fixed inset-0 bg-black bg-opacity-95 flex flex-col items-center justify-center transition-opacity duration-300 md:hidden ${
-              mobileMenuOpen ? 'opacity-100 z-40' : 'opacity-0 pointer-events-none'
+            className={`fixed inset-0 bg-black bg-opacity-95 flex flex-col items-center justify-center transition-all duration-300 md:hidden ${
+              mobileMenuOpen ? 'opacity-100 z-40 visible' : 'opacity-0 invisible'
             }`}
           >
+            {/* Close button inside the mobile menu */}
+            <button
+              className="absolute top-6 right-4 text-white focus:outline-none"
+              onClick={() => setMobileMenuOpen(false)}
+              aria-label="Close menu"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+            
             <nav className="flex flex-col items-center space-y-8">
               {navLinks.map((link) => (
                 <Link
@@ -1586,13 +1651,16 @@ const VideoPlayer = ({ url, autoPlay = false }: VideoPlayerProps) => {
       setLoading(false);
     };
 
-    if (playerRef.current) {
-      playerRef.current.addEventListener('load', handleLoad);
+    // Store reference to current value to avoid the React hooks warning
+    const currentRef = playerRef.current;
+
+    if (currentRef) {
+      currentRef.addEventListener('load', handleLoad);
     }
 
     return () => {
-      if (playerRef.current) {
-        playerRef.current.removeEventListener('load', handleLoad);
+      if (currentRef) {
+        currentRef.removeEventListener('load', handleLoad);
       }
     };
   }, []);
@@ -1820,235 +1888,6 @@ const ContactForm = () => {
 export default ContactForm;
 ```
 
-# src/components/equipment/EquipmentCard.tsx
-
-```tsx
-import Image from 'next/image';
-
-interface Equipment {
-  id: number;
-  name: string;
-  category: string;
-  image: string;
-  description: string;
-  dailyRate: number;
-  weeklyRate: number;
-  availability: boolean;
-}
-
-interface EquipmentCardProps {
-  equipment: Equipment;
-}
-
-const EquipmentCard = ({ equipment }: EquipmentCardProps) => {
-  return (
-    <div className="bg-gray-800 bg-opacity-50 overflow-hidden">
-      <div className="relative aspect-video overflow-hidden">
-        <Image
-          src={equipment.image}
-          alt={equipment.name}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover"
-        />
-        <div className={`absolute top-4 right-4 px-3 py-1 text-xs font-semibold uppercase ${
-          equipment.availability ? 'bg-green-600' : 'bg-red-600'
-        }`}>
-          {equipment.availability ? 'Available' : 'Unavailable'}
-        </div>
-      </div>
-      <div className="p-6">
-        <h3 className="text-xl font-bold mb-2">{equipment.name}</h3>
-        <p className="text-gray-300 mb-4">{equipment.description}</p>
-        <div className="flex justify-between items-center">
-          <div>
-            <p className="text-lg font-semibold">${equipment.dailyRate} <span className="text-sm text-gray-400">/ day</span></p>
-            <p className="text-sm text-gray-400">${equipment.weeklyRate} / week</p>
-          </div>
-          <button 
-            className={`px-4 py-2 text-sm font-medium transition-colors duration-200 ${
-              equipment.availability
-                ? 'bg-red-600 hover:bg-red-700 text-white'
-                : 'bg-gray-700 text-gray-400 cursor-not-allowed'
-            }`}
-            disabled={!equipment.availability}
-          >
-            Inquire
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default EquipmentCard;
-```
-
-# src/components/equipment/EquipmentList.tsx
-
-```tsx
-'use client';
-
-import { useState } from 'react';
-import EquipmentCard from './EquipmentCard';
-
-// Equipment categories
-const categories = [
-  { id: 'all', name: 'All Equipment' },
-  { id: 'cameras', name: 'Cameras' },
-  { id: 'lenses', name: 'Lenses' },
-  { id: 'lighting', name: 'Lighting' },
-  { id: 'audio', name: 'Audio' },
-  { id: 'stabilizers', name: 'Stabilizers' },
-  { id: 'accessories', name: 'Accessories' },
-];
-
-// Sample equipment data
-const equipmentItems = [
-  {
-    id: 1,
-    name: 'Sony FX9',
-    category: 'cameras',
-    image: '/images/equipment/camera-1.jpg',
-    description: 'Full-frame 6K sensor camera with 15+ stops of dynamic range and dual ISO.',
-    dailyRate: 350,
-    weeklyRate: 1400,
-    availability: true,
-  },
-  {
-    id: 2,
-    name: 'RED Komodo 6K',
-    category: 'cameras',
-    image: '/images/equipment/camera-2.jpg',
-    description: 'Compact cinema camera with 6K Super 35mm sensor and global shutter.',
-    dailyRate: 400,
-    weeklyRate: 1600,
-    availability: true,
-  },
-  {
-    id: 3,
-    name: 'Canon Cinema Prime Lens Set',
-    category: 'lenses',
-    image: '/images/equipment/lens-1.jpg',
-    description: 'Set of 6 cinema prime lenses (24mm, 35mm, 50mm, 85mm, 100mm, 135mm).',
-    dailyRate: 250,
-    weeklyRate: 1000,
-    availability: true,
-  },
-  {
-    id: 4,
-    name: 'Arri SkyPanel S60-C',
-    category: 'lighting',
-    image: '/images/equipment/light-1.jpg',
-    description: 'LED soft light with adjustable CCT and full RGB color control.',
-    dailyRate: 180,
-    weeklyRate: 720,
-    availability: false,
-  },
-  {
-    id: 5,
-    name: 'Sennheiser MKH 416',
-    category: 'audio',
-    image: '/images/equipment/audio-1.jpg',
-    description: 'Professional short shotgun microphone for film and television production.',
-    dailyRate: 60,
-    weeklyRate: 240,
-    availability: true,
-  },
-  {
-    id: 6,
-    name: 'DJI Ronin 2',
-    category: 'stabilizers',
-    image: '/images/equipment/stabilizer-1.jpg',
-    description: 'Professional 3-axis camera stabilizer with 30lb payload capacity.',
-    dailyRate: 150,
-    weeklyRate: 600,
-    availability: true,
-  },
-  {
-    id: 7,
-    name: 'SmallHD 702 Touch Monitor',
-    category: 'accessories',
-    image: '/images/equipment/accessory-1.jpg',
-    description: '7" daylight viewable on-camera monitor with touchscreen interface.',
-    dailyRate: 80,
-    weeklyRate: 320,
-    availability: true,
-  },
-  {
-    id: 8,
-    name: 'ARRI ALEXA Mini LF',
-    category: 'cameras',
-    image: '/images/equipment/camera-3.jpg',
-    description: 'Large format camera with ARRI color science and up to 4.5K resolution.',
-    dailyRate: 550,
-    weeklyRate: 2200,
-    availability: true,
-  },
-  {
-    id: 9,
-    name: 'Zeiss Supreme Prime Lens Set',
-    category: 'lenses',
-    image: '/images/equipment/lens-2.jpg',
-    description: 'Set of 7 high-end cinema lenses with T1.5 aperture.',
-    dailyRate: 400,
-    weeklyRate: 1600,
-    availability: true,
-  },
-];
-
-const EquipmentList = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  
-  // Filter equipment based on active category
-  const filteredEquipment = activeCategory === 'all'
-    ? equipmentItems
-    : equipmentItems.filter(item => item.category === activeCategory);
-  
-  return (
-    <section id="equipment-list" className="py-16 bg-gray-900">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="mb-12">
-          <div className="flex flex-wrap gap-2 md:gap-4 justify-center">
-            {categories.map((category) => {
-              const isActive = category.id === activeCategory;
-              
-              return (
-                <button
-                  key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`px-6 py-2 text-sm transition-colors duration-200 ${
-                    isActive
-                      ? 'bg-red-600 text-white'
-                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-                  }`}
-                >
-                  {category.name}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredEquipment.map((item) => (
-            <EquipmentCard key={item.id} equipment={item} />
-          ))}
-        </div>
-        
-        {filteredEquipment.length === 0 && (
-          <div className="text-center py-16">
-            <p className="text-gray-400 text-lg">No equipment found in this category.</p>
-          </div>
-        )}
-      </div>
-    </section>
-  );
-};
-
-export default EquipmentList;
-```
-
 # src/components/home/ClientsSection.tsx
 
 ```tsx
@@ -2056,11 +1895,9 @@ import Image from 'next/image';
 import Button from '@/components/common/Button';
 
 const clients = [
-  // { id: 1, name: 'OctaFx', logo: '/images/clients/client-1.svg' },
-  { id: 2, name: 'Glenfiddich', logo: '/images/Glenfiddich.png' },
+  { id: 2, name: 'evenintheday', logo: '/images/evenintheday.png' },
   { id: 3, name: 'Balvenie', logo: '/images/balvenie.png' },
-  // { id: 4, name: 'TravelBeta', logo: '/images/travelbeta.png' },
-  { id: 5, name: 'CocaCola', logo: '/images/CocaCola.png' },
+  { id: 5, name: 'CocaCola', logo: '/images/Coca-Cola_logo.svg' },
   { id: 6, name: 'Fanta', logo: '/images/fanta.png' },
 ];
 
@@ -2077,13 +1914,9 @@ const ClientsSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-5 mb-15 ">
+        <div className="grid grid-cols-2 md:grid-cols-4 max-w-5xl mx-auto gap-10 md:gap-5 mb-15">
           {clients.map((client) => (
-            <div 
-              key={client.id} 
-              className="flex items-center justify-center"
-            >
-              <div className="relative h-12 w-full grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+              <div key={client.id}  className="relative h-12 w-full">
                 <Image
                   src={client.logo}
                   alt={client.name}
@@ -2092,7 +1925,6 @@ const ClientsSection = () => {
                   className="object-contain"
                 />
               </div>
-            </div>
           ))}
         </div>
         
@@ -2184,7 +2016,7 @@ const HeroBanner = () => {
           alt=""
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black opacity-80"></div>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
       </div>
 
       {/* Content */}
@@ -2196,10 +2028,10 @@ const HeroBanner = () => {
                 isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}
             >
-              Captivating <span className="text-[#3A6E71]">Visual Stories</span> That Resonate
+              Telling <span className="text-[#3A6E71]">Impactful Stories</span> Through Visuals
             </h1>
             <p 
-              className={`text-xl md:text-2xl text-gray-300 mb-10 transition-all duration-1000 delay-300 ${
+              className={` md:text-2xl text-gray-300 mb-10 transition-all duration-1000 delay-300 ${
                 isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}
             >
@@ -2237,33 +2069,42 @@ export default HeroBanner;
 # src/components/home/PortfolioPreview.tsx
 
 ```tsx
-import Link from 'next/link';
+import VideoPlayer from '@/components/common/VideoPlayer';
 import Button from '@/components/common/Button';
 
-const categories = [
+// Featured projects from each category
+const featuredProjects = [
   { 
-    id: 'commercials', 
-    name: 'Commercials', 
-    image: '/images/portfolio/commercial-preview.jpg',
-    count: 12
+    id: 1, 
+    title: 'Octa How to..', 
+    category: 'commercials', 
+    video: 'https://youtu.be/pcXIfx9V108',
+    client: 'OctaFX',
+    categoryName: 'Commercials'
   },
   { 
-    id: 'films', 
-    name: 'Films & Documentaries', 
-    image: '/images/portfolio/film-preview.jpg',
-    count: 8
+    id: 6, 
+    title: 'If the world revolves around me', 
+    category: 'films', 
+    video: 'https://youtu.be/TebtBJPX7mo',
+    client: 'OctaFX',
+    categoryName: 'Documentary'
   },
   { 
-    id: 'music', 
-    name: 'Music Videos', 
-    image: '/images/portfolio/music-preview.jpg',
-    count: 15
+    id: 8, 
+    title: 'Sounds from Vict0ny', 
+    category: 'music', 
+    video: 'https://youtu.be/tawp1V7M3i4',
+    client: 'Vict0ny',
+    categoryName: 'Music Videos'
   },
   { 
-    id: 'events', 
-    name: 'Event Coverage', 
-    image: '/images/portfolio/event-preview.jpg',
-    count: 10
+    id: 4, 
+    title: 'Grand Cru Night', 
+    category: 'events', 
+    video: 'https://youtu.be/keoiQuOqML8',
+    client: 'Glenfiddich',
+    categoryName: 'Events'
   },
 ];
 
@@ -2275,29 +2116,27 @@ const PortfolioPreview = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-6 font-montserrat">
             Our <span className="text-[#3A6E71]">Portfolio</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore our diverse range of visual storytelling across different genres and formats.
+          <p className="md:text-xl text-gray-300 max-w-3xl mx-auto">
+            Explore our range of visual storytelling across different genres and formats.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          {categories.map((category) => (
-            <Link
-              key={category.id}
-              href={`/portfolio/${category.id}`}
-              className="group relative overflow-hidden red"
-            >
-              <div className="aspect-video bg-gray-800 overflow-hidden">
-                <div 
-                  className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                  style={{ backgroundImage: `url(${category.image})` }}
-                ></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          {featuredProjects.map((project) => (
+            <div key={project.id} className="bg-gray-900 overflow-hidden">
+              <div className="aspect-video bg-gray-800">
+                <VideoPlayer url={project.video} />
               </div>
-              <div className="absolute inset-0 bg-black bg-opacity-60 group-hover:bg-opacity-40 transition-all duration-300 flex flex-col justify-end p-6">
-                <h3 className="text-xl font-bold mb-2">{category.name}</h3>
-                <p className="text-sm text-gray-300">{category.count} Projects</p>
+              <div className="p-4">
+                <div className="flex justify-between items-start">
+                  <h3 className="text-lg font-bold">{project.title}</h3>
+                  <span className="text-xs px-2 py-1 bg-gray-800 text-gray-300">
+                    {project.categoryName}
+                  </span>
+                </div>
+                <p className="text-sm text-gray-400 mt-1">{project.client}</p>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
         
@@ -2320,7 +2159,6 @@ export default PortfolioPreview;
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 interface CategoryFilterProps {
@@ -2331,15 +2169,12 @@ const categories = [
   { id: 'all', name: 'All Projects' },
   { id: 'commercials', name: 'Commercials' },
   { id: 'films', name: 'Films & Documentaries' },
-  // { id: 'documentaries', name: 'Films & Documentaries' },
   { id: 'music', name: 'Music Videos' },
-  { id: 'events', name: 'Event Coverage' },
+  { id: 'events', name: 'Events' },
 ];
 
 const CategoryFilter = ({ activeCategory }: CategoryFilterProps) => {
   const [active, setActive] = useState(activeCategory || 'all');
-  const router = useRouter();
-  const pathname = usePathname();
 
   useEffect(() => {
     setActive(activeCategory || 'all');
@@ -2379,26 +2214,21 @@ export default CategoryFilter;
 
 ```tsx
 'use client';
-
-import { useState } from 'react';
 import ProjectCard from './ProjectCard';
-import { useRouter } from 'next/navigation';
 
-// Mock portfolio data with YouTube video URLs
+
 const portfolioItems = [
   {
     id: 1,
     title: 'Octa How to..',
     category: 'commercials',
-    image: '/images/portfolio/commercial-1.jpg',
     video: ' https://youtu.be/pcXIfx9V108',
     client: 'OctaFX',
   },
   {
     id: 2,
     title: 'The Balvenie x Cigars',
-    category: 'commercials',
-    image: '/images/portfolio/film-1.jpg',
+    category: 'events',
     video: 'https://youtu.be/zRVyu58eT9o',
     client: 'Balvenie',
   },
@@ -2406,7 +2236,6 @@ const portfolioItems = [
     id: 3,
     title: 'Entity Fashion Film',
     category: 'commercials',
-    image: '/images/portfolio/music-1.jpg',
     video: 'https://youtu.be/_hekaNQ6-zU',
     client: 'Entity',
   },
@@ -2414,7 +2243,6 @@ const portfolioItems = [
     id: 4,
     title: 'Grand Cru Night',
     category: 'events',
-    image: '/images/portfolio/event-1.jpg',
     video: 'https://youtu.be/keoiQuOqML8',
     client: 'Glenfiddich',
   },
@@ -2422,7 +2250,6 @@ const portfolioItems = [
     id: 5,
     title: 'Balvenie Networking Event',
     category: 'events',
-    image: '/images/portfolio/commercial-2.jpg',
     video: 'https://youtu.be/k4l22qSuyZ8',
     client: 'Balvenie',
   },
@@ -2430,7 +2257,6 @@ const portfolioItems = [
     id: 6,
     title: 'If the world revolves around me',
     category: 'films',
-    image: '/images/portfolio/film-2.jpg',
     video: 'https://youtu.be/TebtBJPX7mo',
     client: 'OctaFX',
   },
@@ -2438,7 +2264,6 @@ const portfolioItems = [
     id: 7,
     title: 'Ready to Choose Financial Freedom?',
     category: 'commercials',
-    image: '/images/portfolio/music-2.jpg',
     video: 'https://youtu.be/xmOGaCZH7a8',
     client: 'OctaFx',
   },
@@ -2446,7 +2271,6 @@ const portfolioItems = [
     id: 8,
     title: 'Sounds from Vict0ny',
     category: 'music',
-    image: '/images/portfolio/event-2.jpg',
     video: 'https://youtu.be/tawp1V7M3i4',
     client: 'Vict0ny',
   },
@@ -2454,7 +2278,6 @@ const portfolioItems = [
     id: 9,
     title: 'Chess in Slums Makoko',
     category: 'films',
-    image: '/images/portfolio/commercial-3.jpg',
     video: 'https://youtu.be/scHxpzxmQQw',
     client: 'Chess in Slums',
   },
@@ -2462,7 +2285,6 @@ const portfolioItems = [
     id: 10,
     title: 'Travel Beta Ad',
     category: 'commercials',
-    image: '/images/portfolio/commercial-3.jpg',
     video: 'https://youtu.be/tSTGizFwJ6U',
     client: 'TravelBeta',
   },
@@ -2476,11 +2298,31 @@ const portfolioItems = [
   },
   {
     id: 12,
+    title: 'Balvenie Luxury Wine tasting',
+    category: 'events',
+    video: 'https://youtu.be/RayzG7M4B_w',
+    client: 'Balvenie',
+  },
+  {
+    id: 13,
     title: 'Octa celebrates 11 years',
     category: 'events',
-    image: '/images/portfolio/commercial-3.jpg',
     video: 'https://youtu.be/EI0snblr7q8',
     client: 'OctaFX',
+  },
+  {
+    id: 14,
+    title: 'OctaFX Q&A Session',
+    category: 'commercials',
+    video: 'https://youtu.be/caHYdPG0sCI',
+    client: 'OctaFX',
+  },
+  {
+    id: 15,
+    title: 'Embrace Equity (IWD)',
+    category: 'films',
+    video: 'https://youtu.be/9VYTNYg7_30',
+    client: 'KVLT',
   },
 ];
 
@@ -2489,7 +2331,7 @@ interface PortfolioGalleryProps {
 }
 
 const PortfolioGallery = ({ category }: PortfolioGalleryProps) => {
-  const [selectedProject, setSelectedProject] = useState<number | null>(null);
+  // const [selectedProject, setSelectedProject] = useState<number | null>(null);
   // const router = useRouter();
   
   // Filter portfolio items based on category
@@ -2497,8 +2339,9 @@ const PortfolioGallery = ({ category }: PortfolioGalleryProps) => {
     ? portfolioItems.filter(item => item.category === category)
     : portfolioItems;
   
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleProjectClick = (id: number) => {
-    setSelectedProject(id);
+    // setSelectedProject(id);
     // Here you would typically open a modal or navigate to a project detail page
     // For simplicity, we'll just set the selected project ID for now
   };
@@ -2532,18 +2375,14 @@ export default PortfolioGallery;
 ```tsx
 'use client';
 
-import Image from 'next/image';
-import { useState } from 'react';
 import VideoPlayer from '@/components/common/VideoPlayer';
 
 interface Project {
   id: number;
   title: string;
   category: string;
-  image: string;
   video: string;
   client: string;
-  // year: number;
 }
 
 interface ProjectCardProps {
@@ -2551,17 +2390,7 @@ interface ProjectCardProps {
   onClick: () => void;
 }
 
-const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  
-  const handleOpenModal = () => {
-    setIsModalOpen(true);
-  };
-  
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
-  
+const ProjectCard = ({ project }: ProjectCardProps) => {
   const getCategoryLabel = (category: string) => {
     switch (category) {
       case 'commercials':
@@ -2578,78 +2407,20 @@ const ProjectCard = ({ project, onClick }: ProjectCardProps) => {
   };
   
   return (
-    <>
-      <div
-        className="group cursor-pointer overflow-hidden"
-        onClick={handleOpenModal}
-      >
-        <div className="aspect-video bg-gray-800 overflow-hidden relative">
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover transition-transform duration-700 group-hover:scale-110"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <div className="w-16 h-16 rounded-full bg-[#3A6E71] flex items-center justify-center">
-              <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 5.14V19.14L19 12.14L8 5.14Z" fill="currentColor" />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div className="mt-4">
-          <div className="flex justify-between items-start">
-            <h3 className="text-lg font-bold group-hover:text-[#3A6E71] transition-colors">{project.title}</h3>
-            <span className="text-xs px-2 py-1 bg-gray-800 text-gray-300">
-              {getCategoryLabel(project.category)}
-            </span>
-          </div>
-          <p className="text-sm text-gray-400 mt-1">{project.client}</p>
-        </div>
+    <div className="group cursor-pointer overflow-hidden">
+      <div className="aspect-video bg-gray-800 overflow-hidden relative">
+        <VideoPlayer url={project.video} />
       </div>
-      
-      {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
-          <div className="max-w-5xl w-full bg-gray-900 relative">
-            <button
-              onClick={handleCloseModal}
-              className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black bg-opacity-50 flex items-center justify-center text-white hover:bg-opacity-70 transition-all"
-            >
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            
-            <div className="aspect-video w-full">
-              <VideoPlayer url={project.video} />
-            </div>
-            
-            <div className="p-8">
-              <div className="flex justify-between items-start">
-                <div>
-                  <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
-                  <p className="text-gray-400">Client: {project.client}</p>
-                </div>
-                <span className="text-sm px-3 py-1 bg-gray-800 text-gray-300">
-                  {getCategoryLabel(project.category)}
-                </span>
-              </div>
-              
-              <div className="mt-6">
-                <h3 className="text-lg font-bold mb-2">Project Details</h3>
-                <p className="text-gray-300">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. 
-                  Sed euismod, nisl vel ultricies lacinia, nunc nisl aliquam nisl, 
-                  eget aliquam nisl nisl sit amet nisl.
-                </p>
-              </div>
-            </div>
-          </div>
+      <div className="mt-4">
+        <div className="flex justify-between items-start">
+          <h3 className="text-lg font-bold group-hover:text-[#3A6E71] transition-colors">{project.title}</h3>
+          <span className="text-xs px-2 py-1 bg-gray-800 text-gray-300">
+            {getCategoryLabel(project.category)}
+          </span>
         </div>
-      )}
-    </>
+        <p className="text-sm text-gray-400 mt-1">{project.client}</p>
+      </div>
+    </div>
   );
 };
 

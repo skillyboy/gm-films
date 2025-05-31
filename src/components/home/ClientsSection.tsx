@@ -21,13 +21,9 @@ const ClientsSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-5 mb-15 ">
+        <div className="grid grid-cols-2 md:grid-cols-4 max-w-5xl mx-auto gap-10 md:gap-5 mb-15">
           {clients.map((client) => (
-            <div 
-              key={client.id} 
-              className="flex items-center justify-center"
-            >
-              <div className="relative h-12 w-full hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+              <div key={client.id}  className="relative h-12 w-full">
                 <Image
                   src={client.logo}
                   alt={client.name}
@@ -36,7 +32,6 @@ const ClientsSection = () => {
                   className="object-contain"
                 />
               </div>
-            </div>
           ))}
         </div>
         

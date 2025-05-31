@@ -41,7 +41,7 @@ const portfolioItems = [
   {
     id: 6,
     title: 'If the world revolves around me',
-    category: 'commercials',
+    category: 'films',
     video: 'https://youtu.be/TebtBJPX7mo',
     client: 'OctaFX',
   },
@@ -109,6 +109,34 @@ const portfolioItems = [
     video: 'https://youtu.be/9VYTNYg7_30',
     client: 'KVLT',
   },
+  {
+    id: 16,
+    title: 'Coca Cola Wozzah',
+    category: 'commercials',
+    video: 'https://youtu.be/7mRX-n0f3ec',
+    client: 'Coca Cola',
+  },
+  {
+    id: 17,
+    title: 'Wozzah',
+    category: 'commercials',
+    video: 'https://youtu.be/cjceYruPEvo',
+    client: 'Coca Cola',
+  },
+  // {
+  //   id: 18,
+  //   title: 'Coca Cola Wozzah',
+  //   category: 'commercials',
+  //   video: 'https://youtu.be/7mRX-n0f3ec',
+  //   client: 'Coca Cola',
+  // },
+  // {
+  //   id: 19,
+  //   title: 'Coca Cola Wozzah',
+  //   category: 'commercials',
+  //   video: 'https://youtu.be/7mRX-n0f3ec',
+  //   client: 'Coca Cola',
+  // },
 ];
 
 interface PortfolioGalleryProps {

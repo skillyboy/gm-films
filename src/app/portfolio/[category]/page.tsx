@@ -7,7 +7,7 @@ const categories = [
   { id: 'commercials', name: 'Commercials' },
   { id: 'films', name: 'Films & Documentaries' },
   { id: 'music', name: 'Music Videos' },
-  { id: 'events', name: 'Event Coverage' },
+  { id: 'events', name: 'Event' },
 ];
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

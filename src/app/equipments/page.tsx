@@ -105,7 +105,7 @@ const equipments = [
     },
     {
       "item": "PyroSeven Set with Stand",
-      "price": "85,000"
+      "price": "65,000"
     },
     {
       "item": "Sony FX30 with one lense",
@@ -116,7 +116,7 @@ const equipments = [
       "price": "60,000"
     },
     {
-      "item": "Sony GMiii 70-200mm",
+      "item": "Sony GM ii 70-200mm",
       "price": "50,000"
     },
     {
@@ -124,8 +124,8 @@ const equipments = [
       "price": "150,000"
     },
     {
-      "item": "Sony A7S3 Body Only",
-      "price": "50,000"
+      "item": "Insta 360x4",
+      "price": "40,000"
     },
     {
       "item": "Sand Bag",

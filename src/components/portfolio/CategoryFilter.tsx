@@ -12,7 +12,7 @@ const categories = [
   { id: 'commercials', name: 'Commercials' },
   { id: 'films', name: 'Films & Documentaries' },
   { id: 'music', name: 'Music Videos' },
-  { id: 'events', name: 'Event Coverage' },
+  { id: 'events', name: 'Events' },
 ];
 
 const CategoryFilter = ({ activeCategory }: CategoryFilterProps) => {

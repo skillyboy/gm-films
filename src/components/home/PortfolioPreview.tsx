@@ -14,10 +14,10 @@ const featuredProjects = [
   { 
     id: 6, 
     title: 'If the world revolves around me', 
-    category: 'commercials', 
+    category: 'films', 
     video: 'https://youtu.be/TebtBJPX7mo',
     client: 'OctaFX',
-    categoryName: 'Commercials'
+    categoryName: 'Documentary'
   },
   { 
     id: 8, 
@@ -33,7 +33,7 @@ const featuredProjects = [
     category: 'events', 
     video: 'https://youtu.be/keoiQuOqML8',
     client: 'Glenfiddich',
-    categoryName: 'Event Coverage'
+    categoryName: 'Events'
   },
 ];
 

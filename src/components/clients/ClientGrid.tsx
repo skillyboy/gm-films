@@ -34,11 +34,11 @@ const ClientGrid = () => {
         {industries.map((industry) => (
           <div key={industry} className="mb-16">
             <h2 className="text-2xl font-bold mb-8 pb-2 border-b border-gray-800">{industry}</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-8">
               {clientsByIndustry[industry].map((client, index) => (
                 <div 
                   key={index} 
-                  className="bg-gray-00 bg-opacity-50 flex items-center justify-center aspect-video"
+                  className="bg-gray-00 bg-opacity-50 flex items-center justify-center w-32 h-24 md:w-40 md:h-28 lg:w-44 lg:h-32 flex-shrink-0"
                 >
                   <div className="relative h-12 w-full transition-all duration-300">
                     <Image
