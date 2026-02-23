@@ -5,7 +5,7 @@ import ProjectCard from './ProjectCard';
 const portfolioItems = [
   {
     id: 16,
-    title: 'Coca Cola Wozzah',
+    title: 'Coca Cola wozzah',
     category: 'commercials',
     video: 'https://youtu.be/7mRX-n0f3ec',
     client: 'Coca Cola',
@@ -18,10 +18,52 @@ const portfolioItems = [
     client: 'Coca Cola',
   },
   {
+    id: 18,
+    title: 'Share a coke campaign',
+    category: 'commercials',
+    video: 'https://youtube.com/shorts/lv7VjKA0QqQ?feature=share',
+    client: 'Coca Cola',
+  },
+  {
+    id: 19,
+    title: 'Wanta Fanta',
+    category: 'commercials',
+    video: 'https://youtube.com/shorts/5zys8-V94PA',
+    client: 'Fanta',
+  },
+  {
+    id: 20,
+    title: 'coca-cola',
+    category: 'commercials',
+    video: 'https://youtube.com/shorts/QJ4z3Z4iHe8?feature=share',
+    client: 'Coca Cola',
+  },
+  {
+    id: 21,
+    title: 'GLENFIDDICH',
+    category: 'commercials',
+    video: 'https://youtube.com/shorts/W4yoOSIZi2c?feature=share',
+    client: 'Glenfiddich',
+  },
+  {
+    id: 22,
+    title: 'FANTA East Africa',
+    category: 'commercials',
+    video: 'https://youtu.be/tsS4lzCDVic',
+    client: 'Fanta',
+  },
+  {
+    id: 23,
+    title: 'Wanta',
+    category: 'commercials',
+    video: 'https://youtube.com/shorts/Uog3YZURjus?feature=share',
+    client: 'Fanta',
+  },
+  {
     id: 1,
     title: 'Octa How to..',
     category: 'commercials',
-    video: ' https://youtu.be/pcXIfx9V108',
+    video: 'https://youtu.be/pcXIfx9V108',
     client: 'OctaFX',
   },
   {
@@ -77,7 +119,7 @@ const portfolioItems = [
     id: 9,
     title: 'Chess in Slums Makoko',
     category: 'films',
-    video: 'https://youtu.be/scHxpzxpQQw',
+    video: 'https://youtu.be/scHxpzxmQQw',
     client: 'Chess in Slums',
   },
   {
@@ -137,7 +179,7 @@ const PortfolioGallery = ({ category }: PortfolioGalleryProps) => {
   
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleProjectClick = (id: number) => {
-    // Here you would typically open a modal or navigate to a project detail page
+    // Logic for handling project clicks could go here
   };
   
   return (
