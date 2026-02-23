@@ -4,6 +4,20 @@ import ProjectCard from './ProjectCard';
 
 const portfolioItems = [
   {
+    id: 16,
+    title: 'Coca Cola Wozzah',
+    category: 'commercials',
+    video: 'https://youtu.be/7mRX-n0f3ec',
+    client: 'Coca Cola',
+  },
+  {
+    id: 17,
+    title: 'Wozzah',
+    category: 'commercials',
+    video: 'https://youtu.be/cjceYruPEvo',
+    client: 'Coca Cola',
+  },
+  {
     id: 1,
     title: 'Octa How to..',
     category: 'commercials',
@@ -63,7 +77,7 @@ const portfolioItems = [
     id: 9,
     title: 'Chess in Slums Makoko',
     category: 'films',
-    video: 'https://youtu.be/scHxpzxmQQw',
+    video: 'https://youtu.be/scHxpzxpQQw',
     client: 'Chess in Slums',
   },
   {
@@ -109,34 +123,6 @@ const portfolioItems = [
     video: 'https://youtu.be/9VYTNYg7_30',
     client: 'KVLT',
   },
-  {
-    id: 16,
-    title: 'Coca Cola Wozzah',
-    category: 'commercials',
-    video: 'https://youtu.be/7mRX-n0f3ec',
-    client: 'Coca Cola',
-  },
-  {
-    id: 17,
-    title: 'Wozzah',
-    category: 'commercials',
-    video: 'https://youtu.be/cjceYruPEvo',
-    client: 'Coca Cola',
-  },
-  // {
-  //   id: 18,
-  //   title: 'Coca Cola Wozzah',
-  //   category: 'commercials',
-  //   video: 'https://youtu.be/7mRX-n0f3ec',
-  //   client: 'Coca Cola',
-  // },
-  // {
-  //   id: 19,
-  //   title: 'Coca Cola Wozzah',
-  //   category: 'commercials',
-  //   video: 'https://youtu.be/7mRX-n0f3ec',
-  //   client: 'Coca Cola',
-  // },
 ];
 
 interface PortfolioGalleryProps {
@@ -144,9 +130,6 @@ interface PortfolioGalleryProps {
 }
 
 const PortfolioGallery = ({ category }: PortfolioGalleryProps) => {
-  // const [selectedProject, setSelectedProject] = useState<number | null>(null);
-  // const router = useRouter();
-  
   // Filter portfolio items based on category
   const filteredItems = category && category !== 'all'
     ? portfolioItems.filter(item => item.category === category)
@@ -154,9 +137,7 @@ const PortfolioGallery = ({ category }: PortfolioGalleryProps) => {
   
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleProjectClick = (id: number) => {
-    // setSelectedProject(id);
     // Here you would typically open a modal or navigate to a project detail page
-    // For simplicity, we'll just set the selected project ID for now
   };
   
   return (
