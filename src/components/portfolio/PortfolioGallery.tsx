@@ -21,7 +21,7 @@ const portfolioItems = [
     id: 18,
     title: 'Share a coke campaign',
     category: 'commercials',
-    video: 'https://youtube.com/shorts/lv7VjKA0QqQ?feature=share',
+    video: 'https://youtube.com/shorts/lv7VjKA0QqQ',
     client: 'Coca Cola',
   },
   {
@@ -35,14 +35,14 @@ const portfolioItems = [
     id: 20,
     title: 'coca-cola',
     category: 'commercials',
-    video: 'https://youtube.com/shorts/QJ4z3Z4iHe8?feature=share',
+    video: 'https://youtube.com/shorts/QJ4z3Z4iHe8',
     client: 'Coca Cola',
   },
   {
     id: 21,
     title: 'GLENFIDDICH',
     category: 'commercials',
-    video: 'https://youtube.com/shorts/W4yoOSIZi2c?feature=share',
+    video: 'https://youtube.com/shorts/W4yoOSIZi2c',
     client: 'Glenfiddich',
   },
   {
@@ -56,7 +56,7 @@ const portfolioItems = [
     id: 23,
     title: 'Wanta',
     category: 'commercials',
-    video: 'https://youtube.com/shorts/Uog3YZURjus?feature=share',
+    video: 'https://youtube.com/shorts/Uog3YZURjus',
     client: 'Fanta',
   },
   {
