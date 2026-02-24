@@ -67,6 +67,13 @@ const portfolioItems = [
     client: 'OctaFX',
   },
   {
+    id: 24,
+    title: 'Hype tour announcement',
+    category: 'commercials',
+    video: 'https://youtu.be/-E-SHmQDzLE',
+    client: 'Hype',
+  },
+  {
     id: 2,
     title: 'The Balvenie x Cigars',
     category: 'events',
