@@ -23,7 +23,7 @@ export default function ClientsPage() {
         <div className="relative container mx-auto px-4 md:px-6">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-montserrat">
-              Our <span className="text-[#3A6E71]">Clients</span>
+              Our <span className="accent-gradient">Clients</span>
             </h1>
             <p className="lg:text-xl text-gray-300">
               We&apos;ve had the privilege of working with renowned brands and talented individuals 

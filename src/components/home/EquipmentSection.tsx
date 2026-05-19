@@ -20,7 +20,7 @@ const EquipmentSection = () => {
           
           <div className="md:w-1/2 md:pl-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 font-montserrat">
-              Professional <span className="text-[#3A6E71]">Equipment</span> Rental
+              Professional <span className="accent-gradient">Equipment</span> Rental
             </h2>
             <p className="text-gray-300 mb-6 text-lg">
               Access high-end cinematography equipment for your projects. We offer a diverse range of cameras, 

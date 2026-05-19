@@ -1,20 +1,30 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import HeroBanner from '@/components/home/HeroBanner';
 import PortfolioPreview from '@/components/home/PortfolioPreview';
 import ClientsSection from '@/components/home/ClientsSection';
 import Button from '@/components/common/Button';
 
+const revealProps = {
+  initial: { opacity: 0, y: 40 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.3 },
+  transition: { duration: 0.6, ease: 'easeOut' as const },
+};
+
 export default function Home() {
   return (
     <>
-      <HeroBanner />   
+      <HeroBanner />
       {/* About Section */}
-      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+      <section className="py-24 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col md:flex-row items-center justify-center">
+          <motion.div {...revealProps} className="flex flex-col md:flex-row items-center justify-center">
             <div className="md:w-1/2 mb-10 md:mb-0 md:pr-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Cinematic Excellence<br/>
-                <span className="text-[#3A6E71]">Visual Storytelling</span>
+                <span className="accent-gradient">Visual Storytelling</span>
               </h2>
               <p className="text-gray-300 mb-6 text-lg">
                 GMFILMS is a premier film company dedicated to creating visually stunning narratives. 
@@ -32,34 +42,34 @@ export default function Home() {
           <div className="w-full md:w-1/2 mt-10 md:mt-0 md:pr-12">
               <div className="relative">
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
+                  <div className="aspect-square bg-gray-800 rounded-xl overflow-hidden shadow-xl ring-1 ring-white/10 transition-transform duration-500 hover:scale-[1.03]">
                     <div className="w-full h-full bg-[url('/images/bts-5.jpg')] bg-cover bg-center"></div>
                   </div>
-                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden translate-y-8">
+                  <div className="aspect-square bg-gray-800 rounded-xl overflow-hidden shadow-xl ring-1 ring-white/10 transition-transform duration-500 hover:scale-[1.03] translate-y-8">
                     <div className="w-full h-full bg-[url('/images/bts-2.jpg')] bg-cover bg-center"></div>
                   </div>
-                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden -translate-y-8">
+                  <div className="aspect-square bg-gray-800 rounded-xl overflow-hidden shadow-xl ring-1 ring-white/10 transition-transform duration-500 hover:scale-[1.03] -translate-y-8">
                     <div className="w-full h-full bg-[url('/images/bts-3.jpg')] bg-cover bg-center"></div>
                   </div>
-                  <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
+                  <div className="aspect-square bg-gray-800 rounded-xl overflow-hidden shadow-xl ring-1 ring-white/10 transition-transform duration-500 hover:scale-[1.03]">
                     <div className="w-full h-full bg-[url('/images/bts-6.jpg')] bg-cover bg-center"></div>
                   </div>
                 </div>
               </div>
           </div>
 
-          </div>
+          </motion.div>
         </div>
       </section>
-      
+
       <PortfolioPreview />
       <ClientsSection />
-      
+
       {/* CTA Section */}
-      <section className="py-20 bg-gray-900">
-        <div className="container mx-auto px-4 md:px-6 text-center">
+      <section className="py-24 bg-gray-900">
+        <motion.div {...revealProps} className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Bring Your <span className="text-[#3A6E71]">Vision to Life</span>?
+            Ready to Bring Your <span className="accent-gradient">Vision to Life</span>?
           </h2>
           <p className="md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
             Let&apos;s collaborate to create stunning visuals that tell your story and captivate your audience.
@@ -72,7 +82,7 @@ export default function Home() {
               Contact Us
             </Button>
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   );

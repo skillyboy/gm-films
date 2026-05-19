@@ -4,6 +4,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,28 +40,32 @@ const Header = () => {
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black bg-opacity-90 py-2' : 'bg-transparent py-4'
+        isScrolled ? 'glass py-3' : 'bg-transparent py-5'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
-          <Link href="/" className="relative z-10">
+          <Link href="/" className="relative z-10 transition-transform duration-300 hover:scale-105">
             <img src={'/images/Primary logo.png'} alt='logo' className='w-[120px]'/>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                href={link.path}
-                className={`text-sm uppercase tracking-wider font-medium hover:text-[#3A6E71] transition-colors ${
-                  pathname === link.path ? 'text-[#3A6E71]' : 'text-white'
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const active = pathname === link.path;
+              return (
+                <Link
+                  key={link.path}
+                  href={link.path}
+                  data-active={active}
+                  className={`nav-underline text-sm uppercase tracking-wider font-medium transition-colors duration-300 ${
+                    active ? 'text-accent' : 'text-white hover:text-accent'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Mobile Menu Button */}
@@ -95,48 +100,66 @@ const Header = () => {
           </button>
 
           {/* Mobile Menu */}
-          <div
-            className={`fixed inset-0 bg-black bg-opacity-95 flex flex-col items-center justify-center transition-all duration-300 md:hidden ${
-              mobileMenuOpen ? 'opacity-100 z-40 visible' : 'opacity-0 invisible'
-            }`}
-          >
-            {/* Close button inside the mobile menu */}
-            <button
-              className="absolute top-6 right-4 text-white focus:outline-none"
-              onClick={() => setMobileMenuOpen(false)}
-              aria-label="Close menu"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+          <AnimatePresence>
+            {mobileMenuOpen && (
+              <motion.div
+                key="mobile-menu"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="fixed inset-0 z-40 flex flex-col items-center justify-center md:hidden"
+                style={{
+                  backgroundColor: 'rgba(8, 8, 8, 0.92)',
+                  backdropFilter: 'blur(16px)',
+                  WebkitBackdropFilter: 'blur(16px)',
+                }}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-            
-            <nav className="flex flex-col items-center space-y-8">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  href={link.path}
-                  className={`text-lg uppercase tracking-wider font-medium hover:text-[#3A6E71] transition-colors ${
-                    pathname === link.path ? 'text-[#3A6E71]' : 'text-white'
-                  }`}
+                {/* Close button inside the mobile menu */}
+                <button
+                  className="absolute top-6 right-4 text-white focus:outline-none"
                   onClick={() => setMobileMenuOpen(false)}
+                  aria-label="Close menu"
                 >
-                  {link.name}
-                </Link>
-              ))}
-            </nav>
-          </div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-8 w-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+
+                <nav className="flex flex-col items-center space-y-8">
+                  {navLinks.map((link, i) => (
+                    <motion.div
+                      key={link.path}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.08 * i + 0.1, duration: 0.35 }}
+                    >
+                      <Link
+                        href={link.path}
+                        className={`text-lg uppercase tracking-wider font-medium transition-colors duration-300 ${
+                          pathname === link.path ? 'text-accent' : 'text-white hover:text-accent'
+                        }`}
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {link.name}
+                      </Link>
+                    </motion.div>
+                  ))}
+                </nav>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </header>

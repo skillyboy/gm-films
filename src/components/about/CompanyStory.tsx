@@ -7,16 +7,16 @@ const CompanyStory = () => {
           <div className="w-full md:w-1/2 mt-10 md:mt-0 md:pr-12">
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
-                <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
+                <div className="aspect-square bg-gray-800 rounded-xl overflow-hidden shadow-xl ring-1 ring-white/10 transition-transform duration-500 hover:scale-[1.03]">
                   <div className="w-full h-full bg-[url('/images/bts-1.jpg')] bg-cover bg-center"></div>
                 </div>
-                <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden translate-y-8">
+                <div className="aspect-square bg-gray-800 rounded-xl overflow-hidden shadow-xl ring-1 ring-white/10 transition-transform duration-500 hover:scale-[1.03] translate-y-8">
                   <div className="w-full h-full bg-[url('/images/bts-2.jpg')] bg-cover bg-center"></div>
                 </div>
-                <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden -translate-y-8">
+                <div className="aspect-square bg-gray-800 rounded-xl overflow-hidden shadow-xl ring-1 ring-white/10 transition-transform duration-500 hover:scale-[1.03] -translate-y-8">
                   <div className="w-full h-full bg-[url('/images/bts-3.jpg')] bg-cover bg-center"></div>
                 </div>
-                <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
+                <div className="aspect-square bg-gray-800 rounded-xl overflow-hidden shadow-xl ring-1 ring-white/10 transition-transform duration-500 hover:scale-[1.03]">
                   <div className="w-full h-full bg-[url('/images/bts-4.jpg')] bg-cover bg-center"></div>
                 </div>
               </div>
@@ -25,7 +25,7 @@ const CompanyStory = () => {
           
           <div className="md:w-1/2 md:pl-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 font-montserrat">
-              Our <span className="text-[#3A6E71]">Story</span>
+              Our <span className="accent-gradient">Story</span>
             </h2>
             {/* <p className="text-gray-300 mb-6 text-lg">
               Founded in 2015, GMFILMS began as a small team of passionate filmmakers dedicated 

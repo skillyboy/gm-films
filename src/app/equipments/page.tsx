@@ -157,7 +157,7 @@ export default function EquipmentPage() {
         <div className="relative container mx-auto px-4 md:px-6">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-montserrat">
-              Equipment <span className="text-[#3A6E71]">Rental</span>
+              Equipment <span className="accent-gradient">Rental</span>
             </h1>
             <p className="lg:text-xl text-gray-300">
               Access professional cinematography equipment for your projects. We offer a wide range of 
@@ -192,7 +192,7 @@ export default function EquipmentPage() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a 
                 href="/contact" 
-                className="inline-flex items-center justify-center px-6 py-3 bg-[#3A6E71] hover:bg-[#2d5456] text-white text-sm font-medium tracking-wider uppercase transition-all duration-200"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-[var(--accent)] hover:bg-[var(--accent-bright)] hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-8px_var(--accent-glow)] text-white text-sm font-medium tracking-wider uppercase transition-all duration-300"
               >
                 Contact Us
               </a>

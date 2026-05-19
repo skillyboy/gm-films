@@ -33,10 +33,10 @@ const CategoryFilter = ({ activeCategory }: CategoryFilterProps) => {
             <Link
               key={category.id}
               href={href}
-              className={`px-6 py-2 text-sm transition-colors duration-200 ${
+              className={`px-6 py-2 text-sm rounded-full border transition-all duration-300 ${
                 isActive
-                  ? 'bg-[#3A6E71] text-white'
-                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                  ? 'bg-[var(--accent)] border-[var(--accent)] text-white shadow-[0_8px_20px_-8px_var(--accent-glow)]'
+                  : 'bg-transparent border-[var(--surface-border)] text-gray-300 hover:border-[var(--accent)] hover:text-white'
               }`}
             >
               {category.name}

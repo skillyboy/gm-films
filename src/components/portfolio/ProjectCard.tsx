@@ -32,18 +32,18 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   };
   
   return (
-    <div className="group cursor-pointer overflow-hidden">
+    <div className="surface-card group cursor-pointer">
       <div className="aspect-video bg-gray-800 overflow-hidden relative">
         <VideoPlayer url={project.video} />
       </div>
-      <div className="mt-4">
-        <div className="flex justify-between items-start">
-          <h3 className="text-lg font-bold group-hover:text-[#3A6E71] transition-colors">{project.title}</h3>
-          <span className="text-xs px-2 py-1 bg-gray-800 text-gray-300">
+      <div className="p-5">
+        <div className="flex justify-between items-start gap-3">
+          <h3 className="text-lg font-bold transition-colors duration-300 group-hover:text-accent">{project.title}</h3>
+          <span className="text-xs px-3 py-1 rounded-full bg-[var(--accent-soft)] text-accent border border-[var(--surface-border)] whitespace-nowrap">
             {getCategoryLabel(project.category)}
           </span>
         </div>
-        <p className="text-sm text-gray-400 mt-1">{project.client}</p>
+        <p className="text-sm text-gray-400 mt-2">{project.client}</p>
       </div>
     </div>
   );

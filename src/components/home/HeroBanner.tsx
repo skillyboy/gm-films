@@ -1,8 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
 // components/home/HeroBanner.tsx
 'use client';
 
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import Button from '@/components/common/Button';
 
 const HeroBanner = () => {
@@ -16,13 +16,16 @@ const HeroBanner = () => {
     <section className="relative h-screen w-full overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full">
-        <img
+        <motion.img
           className="absolute inset-0 w-full h-full object-cover"
           src="/images/cinematography.jpg"
           alt=""
+          initial={{ scale: 1.12 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 12, ease: 'easeOut' }}
         />
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        {/* Cinematic vignette overlay */}
+        <div className="absolute inset-0 hero-vignette"></div>
       </div>
 
       {/* Content */}
@@ -34,7 +37,7 @@ const HeroBanner = () => {
                 isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}
             >
-              Telling <span className="text-[#3A6E71]">Impactful Stories</span> Through Visuals
+              Telling <span className="accent-gradient">Impactful Stories</span> Through Visuals
             </h1>
             <p 
               className={` md:text-2xl text-gray-300 mb-10 transition-all duration-1000 delay-300 ${
@@ -60,11 +63,15 @@ const HeroBanner = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <svg className="w-6 h-6 text-white" fill="none" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-          <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      <motion.div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+      >
+        <svg className="w-6 h-6 text-accent" fill="none" strokeWidth="1.5" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
         </svg>
-      </div>
+      </motion.div>
     </section>
   );
 };

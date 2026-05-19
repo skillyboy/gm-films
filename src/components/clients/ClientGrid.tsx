@@ -33,14 +33,16 @@ const ClientGrid = () => {
       <div className="container mx-auto px-4 md:px-6">
         {industries.map((industry) => (
           <div key={industry} className="mb-16">
-            <h2 className="text-2xl font-bold mb-8 pb-2 border-b border-gray-800">{industry}</h2>
+            <h2 className="text-2xl font-bold mb-8 pb-2 border-b border-gray-800">
+              <span className="accent-gradient">{industry}</span>
+            </h2>
             <div className="flex flex-wrap justify-center lg:justify-start gap-8">
               {clientsByIndustry[industry].map((client, index) => (
-                <div 
-                  key={index} 
-                  className="bg-gray-00 bg-opacity-50 flex items-center justify-center w-32 h-24 md:w-40 md:h-28 lg:w-44 lg:h-32 flex-shrink-0"
+                <div
+                  key={index}
+                  className="surface-card flex items-center justify-center w-32 h-24 md:w-40 md:h-28 lg:w-44 lg:h-32 flex-shrink-0 p-5 group"
                 >
-                  <div className="relative h-12 w-full transition-all duration-300">
+                  <div className="relative h-12 w-full grayscale opacity-60 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100">
                     <Image
                       src={client.logo}
                       alt={client.name}

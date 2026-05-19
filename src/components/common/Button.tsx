@@ -18,12 +18,12 @@ const Button = ({
   onClick,
   className = ''
 }: ButtonProps) => {
-  const baseStyles = "inline-flex items-center justify-center px-6 py-3 text-sm font-medium tracking-wider uppercase transition-all duration-200 rounded-none";
-  
+  const baseStyles = "inline-flex items-center justify-center px-6 py-3 text-sm font-medium tracking-wider uppercase transition-all duration-300 rounded-md";
+
   const variantStyles = {
-    default: "bg-[#3A6E71] hover:bg-[#3A6E71] text-white",
-    outline: "border-2 border-[#3A6E71] text-white hover:bg-red-600/10",
-    text: "text-[#3A6E71] hover:text-[#3A6E71] underline-offset-4 hover:underline",
+    default: "bg-[var(--accent)] hover:bg-[var(--accent-bright)] text-white hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-8px_var(--accent-glow)]",
+    outline: "border-2 border-[var(--accent)] text-white hover:bg-[var(--accent)] hover:-translate-y-0.5",
+    text: "text-[var(--accent-bright)] hover:text-white underline-offset-4 hover:underline",
   };
   
   const buttonClasses = `${baseStyles} ${variantStyles[variant]} ${className}`;

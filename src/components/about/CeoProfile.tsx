@@ -7,7 +7,7 @@ const CeoProfile = () => {
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0 md:pr-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 font-montserrat">
-              Meet Our <span className="text-[#3A6E71]">CEO</span>
+              Meet Our <span className="accent-gradient">CEO</span>
             </h2>
             <p className='text-lg'>Boluwatife Jayeoba (aka MaskThaDirector)</p>
             <p className="text-gray-300 mb-6">
@@ -47,13 +47,13 @@ const CeoProfile = () => {
           
           <div className="md:w-1/2 w-full">
             <div className="relative">
-              <div className="aspect-[3/4] max-w-md relative z-10 mx-auto">
+              <div className="aspect-[3/4] max-w-md relative z-10 mx-auto rounded-xl overflow-hidden ring-1 ring-[var(--accent)] shadow-[0_25px_60px_-20px_var(--accent-glow)]">
                 <Image
                   src="/images/ceo-portrait.jpg"
                   alt="Boluwatife Jayeoba - CEO of GMFILMS"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover border-2 border-[#3A6E71]"
+                  className="object-cover"
                 />
               </div>
               {/* <div className="absolute top-8 -left-8 w-full h-full border-2 border-[#3A6E71]"></div> */}

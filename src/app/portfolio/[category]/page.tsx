@@ -33,7 +33,7 @@ export default function CategoryPage({ params }: any) {
         <div className="relative container mx-auto px-4 md:px-6">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-montserrat">
-              <span className="text-[#3A6E71]">{category.name}</span>
+              <span className="accent-gradient">{category.name}</span>
             </h1>
             <p className="text-xl text-gray-300">
               Explore our collection of {category.name.toLowerCase()} projects.

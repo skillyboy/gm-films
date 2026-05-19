@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <h2 className="text-2xl font-bold font-montserrat tracking-wider mb-4">
               <span className="text-white">GM</span>
-              <span className="text-[#3A6E71]">FILMS</span>
+              <span className="accent-gradient">FILMS</span>
             </h2>
             <p className="text-gray-400 max-w-md">
               Professional cinematography services for commercials, films, documentaries, 

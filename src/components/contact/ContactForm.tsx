@@ -46,7 +46,7 @@ const ContactForm = () => {
   return (
     <div className="bg-gray-800 bg-opacity-50 p-8 md:p-12">
       <h2 className="text-3xl font-bold mb-6 font-montserrat">
-        Send Us a <span className="text-[#3A6E71]">Message</span>
+        Send Us a <span className="accent-gradient">Message</span>
       </h2>
       
       {formStatus === 'success' ? (
@@ -67,7 +67,7 @@ const ContactForm = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                Full Name <span className="text-[#3A6E71]">*</span>
+                Full Name <span className="text-accent">*</span>
               </label>
               <input
                 type="text"
@@ -76,13 +76,13 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-gray-900 border border-gray-700 focus:border-[#3A6E71] focus:ring-1 focus:ring-[#3A6E71] outline-none transition-colors text-white"
+                className="input-field rounded-md"
               />
             </div>
             
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                Email Address <span className="text-[#3A6E71]">*</span>
+                Email Address <span className="text-accent">*</span>
               </label>
               <input
                 type="email"
@@ -91,7 +91,7 @@ const ContactForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-gray-900 border border-gray-700 focus:border-[#3A6E71] focus:ring-1 focus:ring-[#3A6E71] outline-none transition-colors text-white"
+                className="input-field rounded-md"
               />
             </div>
             
@@ -105,7 +105,7 @@ const ContactForm = () => {
                 name="company"
                 value={formData.company}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-gray-900 border border-gray-700 focus:border-[#3A6E71] focus:ring-1 focus:ring-[#3A6E71] outline-none transition-colors text-white"
+                className="input-field rounded-md"
               />
             </div>
             
@@ -119,14 +119,14 @@ const ContactForm = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-gray-900 border border-gray-700 focus:border-[#3A6E71] focus:ring-1 focus:ring-[#3A6E71] outline-none transition-colors text-white"
+                className="input-field rounded-md"
               />
             </div>
           </div>
           
           <div>
             <label htmlFor="projectType" className="block text-sm font-medium text-gray-300 mb-2">
-              Project Type <span className="text-[#3A6E71]">*</span>
+              Project Type <span className="text-accent">*</span>
             </label>
             <select
               id="projectType"
@@ -134,7 +134,7 @@ const ContactForm = () => {
               value={formData.projectType}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 focus:border-[#3A6E71] focus:ring-1 focus:ring-[#3A6E71] outline-none transition-colors text-white"
+              className="input-field rounded-md"
             >
               <option value="">Select Project Type</option>
               <option value="commercial">Commercial</option>
@@ -148,7 +148,7 @@ const ContactForm = () => {
           
           <div>
             <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-              Message <span className="text-[#3A6E71]">*</span>
+              Message <span className="text-accent">*</span>
             </label>
             <textarea
               id="message"
@@ -157,7 +157,7 @@ const ContactForm = () => {
               onChange={handleChange}
               required
               rows={6}
-              className="w-full px-4 py-3 bg-gray-900 border border-gray-700 focus:border-[#3A6E71] focus:ring-1 focus:ring-[#3A6E71] outline-none transition-colors text-white"
+              className="input-field rounded-md"
             ></textarea>
           </div>
           
@@ -165,7 +165,7 @@ const ContactForm = () => {
             <button
               type="submit"
               disabled={formStatus === 'submitting'}
-              className="inline-flex items-center justify-center px-8 py-4 bg-[#3A6E71] hover:bg-red-700 text-white text-sm font-medium tracking-wider uppercase transition-all duration-200 w-full md:w-auto disabled:bg-gray-700 disabled:cursor-not-allowed"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-md bg-[var(--accent)] hover:bg-[var(--accent-bright)] hover:-translate-y-0.5 hover:shadow-[0_10px_25px_-8px_var(--accent-glow)] text-white text-sm font-medium tracking-wider uppercase transition-all duration-300 w-full md:w-auto disabled:bg-gray-700 disabled:cursor-not-allowed disabled:translate-y-0 disabled:shadow-none"
             >
               {formStatus === 'submitting' ? (
                 <>

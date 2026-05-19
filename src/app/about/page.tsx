@@ -24,7 +24,7 @@ export default function AboutPage() {
         <div className="relative container mx-auto px-4 md:px-6">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-montserrat">
-              About <span className="text-[#3A6E71]">GMFILMS</span>
+              About <span className="accent-gradient">GMFILMS</span>
             </h1>
             <p className="lg:text-xl text-gray-300">
               Learn about our company, our journey, and the passion that drives us to create 

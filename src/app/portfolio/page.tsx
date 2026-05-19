@@ -24,7 +24,7 @@ export default function PortfolioPage() {
         <div className="relative container mx-auto px-4 md:px-6">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-montserrat">
-              Our <span className="text-[#3A6E71]">Portfolio</span>
+              Our <span className="accent-gradient">Portfolio</span>
             </h1>
             <p className="lg:text-xl text-gray-300">
               Explore our diverse collection of projects spanning commercials, films, documentaries, 

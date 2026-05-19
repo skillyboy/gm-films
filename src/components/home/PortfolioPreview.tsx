@@ -43,7 +43,7 @@ const PortfolioPreview = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 font-montserrat">
-            Our <span className="text-[#3A6E71]">Portfolio</span>
+            Our <span className="accent-gradient">Portfolio</span>
           </h2>
           <p className="md:text-xl text-gray-300 max-w-3xl mx-auto">
             Explore our range of visual storytelling across different genres and formats.
@@ -52,18 +52,18 @@ const PortfolioPreview = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {featuredProjects.map((project) => (
-            <div key={project.id} className="bg-gray-900 overflow-hidden">
+            <div key={project.id} className="surface-card group">
               <div className="aspect-video bg-gray-800">
                 <VideoPlayer url={project.video} />
               </div>
-              <div className="p-4">
-                <div className="flex justify-between items-start">
-                  <h3 className="text-lg font-bold">{project.title}</h3>
-                  <span className="text-xs px-2 py-1 bg-gray-800 text-gray-300">
+              <div className="p-5">
+                <div className="flex justify-between items-start gap-3">
+                  <h3 className="text-lg font-bold transition-colors duration-300 group-hover:text-accent">{project.title}</h3>
+                  <span className="text-xs px-3 py-1 rounded-full bg-[var(--accent-soft)] text-accent border border-[var(--surface-border)] whitespace-nowrap">
                     {project.categoryName}
                   </span>
                 </div>
-                <p className="text-sm text-gray-400 mt-1">{project.client}</p>
+                <p className="text-sm text-gray-400 mt-2">{project.client}</p>
               </div>
             </div>
           ))}
